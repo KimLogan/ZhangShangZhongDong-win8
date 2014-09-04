@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="App1.BlankPage9"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d">  
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton Icon="Home" Label="返回主页" Click="AppBarButton_Click" />
+                <AppBarSeparator/>
+                <AppBarButton Icon="Back" Label="返回上一页" Click="AppBarButton_Click1" />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <Grid x:Name="mapview1" Margin="10,178,556,75"/>
+        <StackPanel HorizontalAlignment="Left" Height="513" Margin="840,180,0,0" VerticalAlignment="Top" Width="465">
+            <Image Width="440" Source="Assets/sports.jpg"/>
+            <ScrollViewer HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="465">
+                <RichTextBlock Height="854" Width="405" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Paragraph>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="              体育场馆" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold"/>
+                    </Paragraph>
+                    <Paragraph FontSize="20" >
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      东校区体育场馆位于东校区中部，体育设施包括：田径场、足球场、网球场、排球场、篮球场、羽毛球场、乒乓球室、棒球场、垒球场、游泳场、健身房、艺术体操房、力量训练场、水上运动基地、多功能综合体育馆等场馆组成。"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      1.田径运动场：(400米标准塑胶跑道及人工草坪足球场)；"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      2.网球场：由6个塑胶场地组成；"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      3.排球场：由10个塑胶场地组成；"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      4.篮球场：由23塑胶场地组成；"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      5.游泳场：架空层由标准健身房、乒乓球室、健美操室、多媒体教室及游泳场周边单、双杠和力量训练场组成。"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      6.综合体育馆：地面一层可以作为羽毛球馆，篮球馆，二层为看台，地下还有两层，为舞蹈训练室和部分体测室。常年羽毛球馆开放，特殊活动时用作室内活动场地。"/>
+                    </Paragraph>
+                </RichTextBlock>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>
+

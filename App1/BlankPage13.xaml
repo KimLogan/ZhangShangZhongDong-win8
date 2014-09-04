@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="App1.BlankPage13"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton Icon="Home" Label="返回主页" Click="AppBarButton_Click" />
+                <AppBarSeparator/>
+                <AppBarButton Icon="Back" Label="返回上一页" Click="AppBarButton_Click1" />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <Grid x:Name="mapview1" Margin="10,90,556,75"/>
+        <StackPanel HorizontalAlignment="Left" Height="603" Margin="840,90,0,0" VerticalAlignment="Top" Width="465">
+            <Image Height="235" Source="Assets/library.jpg" Margin="10,0,10,10"/>
+            <ScrollViewer HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="465">
+                <RichTextBlock Height="948" Width="405" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Paragraph>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="             东校区图书馆" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      中山大学东校区图书馆是中山大学图书馆的校区分馆，位于大学城南北主轴的中心，是东校区的标志性建筑，与北面的行政中心、公共教学大楼合为一组完整的建筑群。" FontFamily="Global User Interface" FontSize="20"/>
+                    </Paragraph>
+                    <Paragraph FontSize="20" TextAlignment="Left">
+                        <LineBreak/>
+                        <Run Text="      中山大学东校区图书馆总建筑面积 35,935平方米，北立面两侧自然张开，如一本翻页的书籍，又如飞升之翼。中间自然形成扇形广场，格局开阔。东、西立面呈门架式外形，斜向窗有遮阳效果，极富韵律感。南立面也呈门架式造型，中间局部凸出，产生强烈虚实对比。结合石材与金属材料的对比，既能体现中山大学的文化底蕴，又具有现代气息。"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      中山大学东校区图书馆于 2004 年11月8日正式投入使用，至2012年底拥有中外文藏书110万余册，期刊2100余种，报纸150余种。目前开放5层。"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      中山大学东校区图书馆为师生提供外借阅览、参考咨询、网络数据库检索、用户培训、馆际互借等多种形式的高品质服务。东校区图书馆现有工作人员30余人，设有馆长办公室、读者服务部两部门。"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      中山大学东校区图书馆的设计和理念具有世界先进图书馆的建筑特点，采用全中央空调、全封闭、等载荷、大空间、通透式的设计；选用国际上最先进的 3M 防盗监测系统、自助还书系统和复印设备，并拥有先进的计算机等技术设备；藏、借、阅、网一体化的现代管理模式。东校区图书馆同时也是充满人性的世界，建筑布局、家具设计、环境摆设、色彩运用、指示标识均充分考虑人性化因素。重人文、重个性，与东校区朝气蓬勃、大胆创新的风格相得益彰。"/>
+                    </Paragraph>
+                </RichTextBlock>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>
+

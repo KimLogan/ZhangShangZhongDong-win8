@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="App1.BlankPage17"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d">  
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton Icon="Home" Label="返回主页" Click="AppBarButton_Click" />
+                <AppBarSeparator/>
+                <AppBarButton Icon="Back" Label="返回上一页" Click="AppBarButton_Click1" />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <Grid x:Name="mapview1" Margin="10,178,556,75"/>
+        <StackPanel HorizontalAlignment="Left" Height="513" Margin="840,180,0,0" VerticalAlignment="Top" Width="465">
+            <Image Width="440" Source="Assets/DSC_1006.jpg" Height="230" Margin="13,0,12,0"/>
+            <ScrollViewer HorizontalAlignment="Left" Height="292" VerticalAlignment="Top" Width="465">
+            <RichTextBlock Height="470" Width="405" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="35,0,25,0" RenderTransformOrigin="0.5,0.5">
+                <Paragraph>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Text="             公共教学楼" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold"/>
+                </Paragraph>
+                <Paragraph>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Text="      东校区公共教学楼总面积37715平方米，由五座教学楼相连而成，由北往南依次编排为A、B、C、D、E栋，外型融为一体， 80人课室位于南北端两座建筑内，中型课室位于中央三幢的1-5层，大型课室位于东西两端，以2-3层为主。教学楼以五层为主，有部分地下室，有大小阶梯课室111间。 到目前为止，共建设多媒体课室97间，全部均为多媒体课室，公共教学楼可同时容纳1万5千7百多人同时上课学习。" FontFamily="Global User Interface" FontSize="20"/>
+                </Paragraph>
+                <Paragraph FontSize="20" TextAlignment="Left">
+                    <LineBreak/>
+                    <Run Text="     非教学时间，公共教学楼B、D栋内一、二层部分教室可供自习使用，方便学生学习。"/>
+                    <LineBreak/>
+                </Paragraph>
+            </RichTextBlock>
+            </ScrollViewer>
+        </StackPanel>        
+    </Grid>
+</Page>
+

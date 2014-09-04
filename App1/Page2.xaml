@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="App1.Page2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d" Height="769.5" Width="1366">
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton Icon="Home" Label="返回主页" Click="AppBarButton_Click" />
+                <AppBarSeparator/>
+                <AppBarButton Icon="Back" Label="返回上一页" Click="AppBarButton_Click1" />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Visibility="Visible" Margin="49,122,649,0">
+            <Image Source="Assets/route.jpg" Height="1216" Width="887" />
+        </ScrollViewer>
+        <TextBlock HorizontalAlignment="Left" Margin="537,37,0,0" TextWrapping="Wrap" Text="推荐线路及景点" VerticalAlignment="Top" FontSize="40" Height="45" Width="560"/>
+
+
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="大学城北" Click="Locate1" Margin="889,146,351,586" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="中大饭堂" Click="Locate6" Margin="1111,146,129,586" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="贝岗街" Click="Locate7" Margin="889,229,351,503" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="新天地" Click="Locate8" Margin="1111,229,129,503" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="体育场馆" Click="Locate9" Margin="889,580,351,152" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="工学院广场" Click="Locate12" Margin="1111,490,129,242" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="图书馆" Click="Locate13" Margin="889,490,351,242" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="实验中心" Click="Locate14" Margin="1111,400,129,332" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="湖畔餐厅" Click="Locate15" Margin="889,314,351,418" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="中大牌坊" Click="Locate16" Margin="889,400,351,332" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+        <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle1}" Background="#16589a" Foreground="White" BorderBrush="Blue"  Content="公教楼" Click="Locate17" Margin="1111,314,129,418" Width="126" FontFamily="Microsoft YaHei UI" FontSize="16" />
+
+
+    </Grid>
+
+</Page>

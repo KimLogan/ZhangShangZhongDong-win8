@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="App1.BlankPage12"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d">  
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton x:ConnectionId='1' Icon="Home" Label="返回主页"                            />
+                <AppBarSeparator/>
+                <AppBarButton x:ConnectionId='2' Icon="Back" Label="返回上一页"                             />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <Grid x:Name="mapview1" Margin="10,178,556,75"/>
+        <StackPanel HorizontalAlignment="Left" Height="513" Margin="840,180,0,0" VerticalAlignment="Top" Width="465">
+            <RichTextBlock Height="470" Width="405" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="35,0,25,0">
+                <Paragraph>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Text="             工学院广场" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold"/>
+                </Paragraph>
+                <Paragraph>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Text="      工学院广场位于中大东校区最高建筑工学院大楼之下，三面有看台环绕。工学院广场常年作为一些大型活动的承办地。每年在这里举行的，有各个学院的迎新晚会，圣诞节前后的舞会等等。工学院广场旁边有一条小径，可以直通一个山上的花园，是中大不多的比较幽静的去处。同时工学院大楼楼顶远眺，基本可以看到中大东校区的全景。" FontFamily="Global User Interface" FontSize="20"/>
+                </Paragraph>
+            </RichTextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
+
+

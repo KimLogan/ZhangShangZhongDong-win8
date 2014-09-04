@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="App1.bus1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xml:space="preserve"
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton x:ConnectionId='1' Icon="Home" Label="返回主页"                            />
+                <AppBarSeparator/>
+                <AppBarButton x:ConnectionId='2' Icon="Back" Label="返回上一页"                             />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+    
+    <Grid Background="Black" >
+        <StackPanel Margin="120 0 0 0">
+
+            <ScrollViewer Height="720" Width="1280" VerticalScrollBarVisibility="Visible" Visibility="Visible">
+                 <RichTextBlock> 
+                     <Paragraph FontSize="40" TextAlignment="Left">
+              东校区→南校区校车时刻和路线表（周一至周五）
+                    </Paragraph>
+
+                    <Paragraph FontSize="20" TextAlignment="Left">
+序号	发车时间	发车点	行车路线	    到达点	    乘坐人员	    车型及数量
+                        <LineBreak/>
+1	8：05	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台
+                        <LineBreak/>
+2	10：05	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+3	10：55	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+4	11：45	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+5	12：15	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+6	12：45	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工	大巴1台<LineBreak/>
+7	14：05	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+8	15：35	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+9	16：25	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+10	17：15	东校区教学楼	1车停坚真花园	南校区文科楼	教职工、学生	大巴3台<LineBreak/>
+11	18：15	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴2台<LineBreak/>
+12	21：05	东校区教学楼	途经黄埔大道、北校区北门	南校区西门对面	教职工、学生	大巴1台<LineBreak/>
+13	21：55	东校区教学楼	途经黄埔大道、北校区北门	南校区西门对面	教职工、学生	大巴1台<LineBreak/>
+                    </Paragraph>    
+                     
+                    <Paragraph FontSize="40" TextAlignment="Left">
+              东校区→北校区校车时刻和路线表（周一至周五）
+                    </Paragraph>
+                     
+                      <Paragraph FontSize="20" TextAlignment="Left">
+序号	发车时间	发车点	行车路线	    到达点	    乘坐人员	    车型及数量<LineBreak/>
+1	8：05	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+2	10：05	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+3	10:55	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+4	11：45	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+5	12:45	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+6	15：35	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+7	16：25	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+8	17：15	东校区教学楼	途经黄埔大道	北校区北门	教职工	大巴1台<LineBreak/>
+9	18：15	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+10	21：05	东校区教学楼	途经黄埔大道、北校区北门	南校区西门对面	教职工、学生	大巴1台<LineBreak/>
+11	21：55	东校区教学楼	途经黄埔大道、北校区北门	南校区西门对面	教职工、学生	大巴1台<LineBreak/>
+                      </Paragraph>
+                     
+                    <Paragraph FontSize="40" TextAlignment="Left">
+              东校区→南校区校车时刻和路线表（周末及节假日）
+                    </Paragraph>
+                     
+                       <Paragraph FontSize="20" TextAlignment="Left">
+发车时间	发车点	    行车路线	               到达点	        乘坐人员	车型及数量<LineBreak/>
+10：00	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+17：00	东校区教学楼	校区内经教师公寓对面	南校区文科楼	教职工、学生	大巴1台<LineBreak/>
+                      </Paragraph>
+                     
+                    <Paragraph FontSize="40" TextAlignment="Left">
+              东校区→北校区校车时刻和路线表（周末及节假日）
+                    </Paragraph>
+                     
+                       <Paragraph FontSize="20" TextAlignment="Left">
+发车时间	发车点	    行车路线	    到达点	        乘坐人员	车型及数量<LineBreak/>
+10：00	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+17：00	东校区教学楼	途经黄埔大道	北校区北门	教职工、学生	大巴1台<LineBreak/>
+                      </Paragraph>
+                    
+
+               
+                </RichTextBlock>
+            </ScrollViewer>
+           
+        </StackPanel>
+    </Grid>
+</Page>
+

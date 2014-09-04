@@ -1,0 +1,1993 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Com.AMap.Maps.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Com.AMap.Maps.Api.AGeolocator">
+            <summary>
+            适用于高德地图的定位接口 封装了 Geolocator 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AGeolocator.GetGeopositionAsync">
+            <summary>
+            Initializes an asynchronous operation to retrieve the location of the user's
+                computer.
+            </summary>
+            <returns> Provides methods for starting the asynchronous request for location data  and handling its completion.</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AGeolocator.GetGeopositionAsync(System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Initializes an asynchronous operation to retrieve the location of the user's  computer.
+            </summary>
+            <param name="maximumAge"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AGeolocator.#ctor">
+            <summary>
+            封装了 Geolocator 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AGeolocator.DesiredAccuracy">
+            <summary>
+            The accuracy level at which the Geolocator provides location updates.
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AGeolocator.LocationStatus">
+            <summary>
+            The status that indicates the ability of the Geolocator to provide location  updates.
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AGeolocator.MovementThreshold">
+            <summary>
+            Gets the distance of movement, in meters, relative to the coordinate from
+                the last PositionChanged event, that is required for the Geolocator to raise
+                a PositionChanged event.
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AGeolocator.ReportInterval">
+            <summary>
+                The requested minimum time interval between location updates, in milliseconds.
+                If your application requires updates infrequently, set this value so that
+                the location provider can conserve power by calculating location only when
+                needed.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AGeolocator.PositionChanged">
+            <summary>
+            Raised when the location is updated.
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AGeolocator.StatusChanged">
+            <summary>
+            Raised when the ability of the Geolocator to provide updated location changes.
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.AMap">
+            <summary>
+            地图
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.AMap.currentZoom">
+            <summary>
+            当前地图级别
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.AMap.currentCenter">
+            <summary>
+            当前地图中心点
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.InitAMapConfig">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.ResetAndQuestCell(System.Boolean)">
+            <summary>
+            发起取图请求
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.GetProjection">
+            <summary>
+            获得 坐标转换 投影
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FromLngLatToScreenPixel(Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            将经纬度坐标转换为屏幕坐标
+            </summary>
+            <param name="lnglat">经纬度坐标</param>
+            <returns>屏幕坐标</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FromScreenPixelToLngLat(Windows.Foundation.Point)">
+            <summary>
+            将屏幕坐标转换为经纬度坐标
+            </summary>
+            <param name="point">屏幕坐标</param>
+            <returns>经纬度坐标</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.SetZoomAndCenter(System.Int32,Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            同时设置地图的中心点及zoom级别。
+            </summary>
+            <param name="zoom">地图的缩放级别 如果地图缩放级别大于或小于最小级别该方法无效 </param>
+            <param name="geoCenter">图的中心点坐标</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.CloseTip">
+            <summary>
+            关闭信息窗口。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.OpenTip(Com.AMap.Maps.Api.BaseTypes.ALngLat,Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            指定位置显示 Tip容器
+            </summary>
+            <param name="lngLat">经纬度</param>
+            <param name="tip">Tip容器</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.OpenTip(Com.AMap.Maps.Api.BaseTypes.ALngLat,Windows.UI.Xaml.FrameworkElement,Windows.Foundation.Point)">
+            <summary>
+            指定位置显示 Tip容器
+            </summary>
+            <param name="lngLat">经纬度</param>
+            <param name="tip">Tip容器</param>
+            <param name="anchor">锚点位置</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.OpenTip(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            调用层管理
+            </summary>
+            <param name="tip">Tip容器</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.CalculateDistance(System.Collections.Generic.IEnumerable{Com.AMap.Maps.Api.BaseTypes.ALngLat})">
+            <summary>
+            测量多点间距离函数 单位米
+            </summary>
+            <param name="lnglats">要计算的经纬度集合</param>
+            <returns>返回数组 索引值为0的值为总长度 </returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FireMapLoadedEvent(Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            触发地图加载完成事件
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FirePanEvent(Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)">
+            <summary>
+            触发平移事件
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FirePanStartEvent(Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)">
+            <summary>
+            触发平移事件
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FirePanEndEvent(Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)">
+            <summary>
+            触发平移事件
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FirePinchStretchEndEvent(Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)">
+            <summary>
+            收缩拉伸事件结束事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FireZoomStartEvent(Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            地图的缩放开始事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FireDoubleTapZoomStartEvent(Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            地图的缩放开始事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FireZoomEndedEvent(Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            缩放地图结束时触发该事件注
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FireTipOpenEvent(System.Object,Com.AMap.Maps.Api.Events.MapRoutedEventArgs)">
+            <summary>
+            触发 tip打开事件
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.FireTipCloseEvent(System.Object,Com.AMap.Maps.Api.Events.MapRoutedEventArgs)">
+            <summary>
+            关闭tip时触发该事件
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.SetOverlaysFitView">
+            <summary>
+            将该层的所有可视的(Visible)并添加到该图层的Overlay对象调整在视野范围内  调整的对象暂不支持自定义容器
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.SetFitview(System.Collections.Generic.IEnumerable{Com.AMap.Maps.Api.Overlays.IOverlay})">
+            <summary>
+            设置覆盖物到合适的地图视野级别。
+            </summary>
+            <param name="overlays">覆盖物对象集合。</param>
+            <remarks>在使用该方法之前，需先将覆盖物添加到地图上。</remarks>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.GetLngLatBounds">
+            <summary>
+            获得地图区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.SetZoomAndCenter(Com.AMap.Maps.Api.BaseTypes.ALngLatBounds)">
+            <summary>
+            根据经纬度坐标范围设置合适的中心点和级别
+            </summary>
+            <param name="bounds">经纬度坐标范围</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.AddOrRefreshTraffic">
+            <summary>
+            添加或刷新实时交通  
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.SendToTop(Windows.UI.Xaml.UIElement)">
+            <summary>
+            移动元素至该图层最上层。
+            </summary>
+            <param name="element">指定元素。</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.AMap.RemoveTraffic">
+            <summary>
+            删除实时交通
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.MapSize">
+            <summary>
+            地图容器大小
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.IsMapLoaded">
+            <summary>
+            是否初始化完成
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.Children">
+            <summary>
+            管理子容器
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.BaseChildren">
+            <summary>
+            真正的子容器
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.Center">
+            <summary>
+            设置获得地图中心点
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.Zoom">
+            <summary>
+            设置地图级别
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.GetTipLayer">
+            <summary>
+            获取TIP 管理层
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.MinZoomLevel">
+            <summary>
+            设置地图显示的最小级别
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.MaxZoomLevel">
+            <summary>
+            设置地图显示的最大级别
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.MapLoaded">
+            <summary>
+            地图初始化完成事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.Pan">
+            <summary>
+            平移事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.PanStart">
+            <summary>
+            平移开始
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.PanEnd">
+            <summary>
+            平移结束
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.PinchStretchStart">
+            <summary>
+            收缩拉伸事件开始
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.PinchStretch">
+            <summary>
+            收缩拉伸事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.PinchStretchEnd">
+            <summary>
+            收缩拉伸事件结束
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.ZoomStart">
+            <summary>
+             地图的缩放开始事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.DoubleTapZoomStart">
+            <summary>
+             地图的缩放开始事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.CenterChanged">
+            <summary>
+            中心点改变事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.ZoomEnded">
+            <summary>
+            缩放地图结束时触发该事件注：连续缩放时 只有结束时触发一次该事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.TipOpen">
+            <summary>
+            打开tip时触发该事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.AMap.TipClose">
+            <summary>
+            关闭tip时触发该事件
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.MapType">
+            <summary>
+            获得和设置地图地图类型
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMap.CurrentTip">
+             <summary>
+            获得当前 Tip
+             </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.AMapConfig">
+            <summary>
+            验证权限
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.AMapConfig.Key">
+            <summary>
+            设置权限
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.APositionChangedEventArgs">
+            <summary>
+            封装的 win8 定位接口 主要返回 适合高德地图使用的位置点
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.APositionChangedEventArgs.PositionChangedEventArgs">
+            <summary>
+            win8 自身返回的定位参数
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.APositionChangedEventArgs.LngLat">
+            <summary>
+            适合高德地图的位置点
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.APositionChangedEventArgs.Accuracy">
+            <summary>
+            定位后准确度 单位米
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.BaseTypes.ALngLat">
+            <summary>
+            经纬度坐标类。经纬度可以以度为单位，也可以以米为单位。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLat.#ctor(System.Double,System.Double)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="lon"></param>
+            <param name="lat"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLat.ToString">
+            <summary>
+            字符串对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLat.Equals(System.Object)">
+            <summary>
+            重写
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLat.LngX">
+            <summary>
+            经度值。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLat.LatY">
+            <summary>
+            纬度值。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLat.Clone">
+            <summary>
+            克隆
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds">
+            <summary>
+            通过经纬度坐标构建经纬度矩形区域对象
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.#ctor(Com.AMap.Maps.Api.BaseTypes.ALngLat,Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            构建经纬度矩形区域对象
+            </summary>
+            <param name="point1">构造经纬度BOUNDS的一个角</param>
+            <param name="point2">构造经纬度BOUNDS的另一个角</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.GetVertexPoints(Com.AMap.Maps.Api.BaseTypes.ALngLat,Com.AMap.Maps.Api.BaseTypes.ALngLat,Com.AMap.Maps.Api.BaseTypes.ALngLat@,Com.AMap.Maps.Api.BaseTypes.ALngLat@)">
+            <summary>
+            获得矩形西南、东北角坐标
+            </summary>
+            <param name="point1"></param>
+            <param name="point2"></param>
+            <param name="SouthWest"></param>
+            <param name="NorthEast"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            经纬度矩形区域对象
+            </summary>
+            <param name="point1X">构建区域的第一个点X</param>
+            <param name="point1Y">构建区域的第一个点Y</param>
+            <param name="point2X">构建区域的第二个点X</param>
+            <param name="point2Y">构建区域的第二个点Y</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.Extend(System.Object)">
+            <summary>
+            扩展 MLngLatBounds 
+            </summary>
+            <param name="obj"> MLngLat对象或者是MLngLatBounds对象</param>
+            <returns>扩展后的MLngLatBounds</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.Contains(Com.AMap.Maps.Api.BaseTypes.ALngLatBounds)">
+            <summary>
+            该区域是否包含指定区域
+            </summary>
+            <param name="lnglatBounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.ContainsPoint(Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            该区域是否包含参数经纬度
+            </summary>
+            <param name="lnglat"></param>
+            <returns>如果包含返回true</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.Intersect(Com.AMap.Maps.Api.BaseTypes.ALngLatBounds)">
+            <summary>
+            两个经纬度框是否相交
+            </summary>
+            <param name="bounds">另一个经纬度框</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.ToString">
+            <summary>
+            重写ToString
+            </summary>
+            <returns>显示左上角和右下角坐标字符串</returns>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.SouthWest">
+            <summary>
+            西南角经纬度坐标对象
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.NorthEast">
+            <summary>
+            东北角经纬度坐标对象
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.Width">
+            <summary>
+            经纬度矩形宽
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.Height">
+            <summary>
+            经纬度矩形高
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.NorthWest">
+            <summary>
+            西北角
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.ALngLatBounds.Clone">
+            <summary>
+            克隆
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.BaseTypes.Range">
+            <summary>
+            范围对象
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.BaseTypes.Range.#ctor(System.Int32,System.Int32)">
+            <summary>
+            范围对象
+            </summary>
+            <param name="fromValue">起始值</param>
+            <param name="toValue">结束值</param>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.Range.From">
+            <summary>
+            起始值
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.BaseTypes.Range.To">
+            <summary>
+            结束值
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Control.GestureControl">
+            <summary>
+            地图手势相关操作
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Control.MapControl">
+            <summary>
+            控件基类
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Control.MapControl.Active">
+            <summary>
+            激活
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Control.MapControl.DeActive">
+            <summary>
+            注销
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Control.MapControl.IsActive">
+            <summary>
+            是否激活控件
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Control.GestureControl.Active">
+            <summary>
+            激活控件
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Control.GestureControl.DeActive">
+            <summary>
+            注销控件
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Control.GestureControl._map_DoubleTapped(System.Object,Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem">
+            <summary>
+            CRS
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.Project(Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            投影计算，默认是等距圆柱投影（也叫方格网或经纬网直投）
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.Unproject(Windows.Foundation.Point)">
+            反投影计算，默认是等距圆柱投影（也叫方格网或经纬网直投）
+        </member>
+        <member name="P:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.MinExtent">
+            <summary>
+            最小坐标范围
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.MaxExtent">
+            <summary>
+            最大坐标范围
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.SpheroidRadius">
+            <summary>
+            将地图表面近似为一个椭球体，该参数表示椭球体的长半轴。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.CentralMeridian">
+            <summary>
+            中央经线，该参数为构造地图投影的基础。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.UnitAuthority">
+            <summary>
+            The authority body that defines the unit of measurement i.e. European Petroleum Survey Group (EPSG).  For DeepEarth.Client.MapControl
+            the unit of measurement is usually degrees and the authority for the datum the map uses, WGS 1984 is EPSG:4326
+            该参数定义了诸如EPSG等的测量单位。对于DeepEarth.Client.MapControl来说，单位通常为度，地图使用的WGS1985水准面的授权为EPSG：4326。 
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.CoordinateReferenceSystemFatory">
+            <summary>
+            CoordinateReferenceSystem 生产工厂 生产默认标准投影
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.CoordinateReferenceSystem.CoordinateReferenceSystemFatory.GetCoordinateReferenceSystem(Com.AMap.Maps.Api.CoordinateSystemType)">
+            <summary>
+            获取到指定的坐标系
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.CoordSystem.Projection">
+            <summary>
+            模版模式 的坐标转换类
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.Projection.LngLatToTileXY(Com.AMap.Maps.Api.BaseTypes.ALngLat,System.Int32)">
+            <summary>
+            根据经纬度获取切片号
+            </summary>
+            <param name="lngLat"></param>
+            <param name="zoom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.Projection.TileXYToLngLat(Windows.Foundation.Point,System.Int32)">
+            <summary>
+            根据左上角切片号获取经纬度坐标
+            </summary>
+            <param name="tileXY"></param>
+            <param name="zoom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.Projection.PixelXYToTileXY(System.Double)">
+            <summary>
+            地理像素坐标转成切片坐标
+            </summary>
+            <param name="pixelXY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.Projection.TileXYToPixelXY(System.Double)">
+            <summary>
+            将切片号变成地理像素坐标
+            </summary>
+            <param name="tileXY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.Projection.GeographicToPixel(Com.AMap.Maps.Api.BaseTypes.ALngLat,System.Int32)">
+            <summary>
+            地理坐标转金字塔坐标
+            </summary>
+            <param name="lngLat"></param>
+            <param name="zoom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.Projection.PixelToGeographic(Windows.Foundation.Point,System.Int32)">
+            <summary>
+            金字塔坐标转地理坐标
+            </summary>
+            <param name="point"></param>
+            <param name="zoom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.Projection.FromPixels(Windows.Foundation.Point)">
+            <summary>
+            该方法用给定的相对于地图左上角为0，0 的 屏幕像素坐标创建一个新的MLngLat。
+            </summary>
+            <param name="point">距离地图左上角的坐标</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.Projection.ToPixels(Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            把给定的MLngLat变换到相对于Map左上角为0，0 的屏幕像素坐标。
+            </summary>
+            <param name="lngLat"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.CoordSystem.Projection.CoordinateReferenceSystem">
+            <summary>
+            可以设置指定的坐标参照系
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.CoordSystem.Projection.PyramidCoordinateSystem">
+            <summary>
+            获取金字塔坐标系
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.CoordSystem.PyramidCoordinateSystem">
+            <summary>
+            金字塔
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.PyramidCoordinateSystem.ProjectToPixel(Windows.Foundation.Point,System.Int32)">
+            <summary>
+            投影坐标转金字塔坐标
+            </summary>
+            <param name="prjPoint"></param>
+            <param name="zoom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.PyramidCoordinateSystem.PixelToProject(Windows.Foundation.Point,System.Int32)">
+            <summary>
+            金字塔坐标转投影坐标
+            </summary>
+            <param name="point"></param>
+            <param name="zoom"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.CoordSystem.SphericalMercator">
+            <summary>
+            墨卡托
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.SphericalMercator.Project(Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            投影计算
+            </summary>
+            <param name="lnglat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.SphericalMercator.Unproject(Windows.Foundation.Point)">
+            <summary>
+            反投影计算
+            </summary>
+            <param name="prjPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.CoordSystem.SphericalMercator.Clip(System.Double,System.Double,System.Double)">
+            <summary>
+            判断当前点是否位于最大、最小值之间
+            </summary>
+            <param name="n"></param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.CoordinateSystemType">
+            <summary>
+            暂时支持的坐标系统   
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.MLineType">
+            <summary>
+            线的样式
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.MLineType.LineSolid">
+            <summary>
+            实现
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.MLineType.LineDashed">
+            <summary>
+            虚线
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.MapType">
+            <summary>
+            地图底图类型
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.MapType.Road">
+            <summary>
+            道路图像
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.MapType.Aerial">
+            <summary>
+            航空图像
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Events.ManipulationHandler">
+            <summary>
+            操作事件
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Events.ManipulationHandler.root">
+            <summary>
+            操作元素
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.ManipulationHandler.FirePinchStretchEndEvent(System.Object,Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)">
+            <summary>
+            收缩拉伸事件结束事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Events.ManipulationHandler._panning">
+            <summary>
+            是否正在平移
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Events.ManipulationHandler._pinchOrStretching">
+            <summary>
+            是否正在缩放
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.ManipulationHandler.#ctor(Windows.UI.Xaml.UIElement)">
+            <summary>
+            注册手势操作的元素
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Events.ManipulationHandler.tapStartTimestamp">
+            <summary>
+            点击开始时间标记
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.ManipulationHandler.FirePanEvent(Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)">
+            <summary>
+            触发移动事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.ManipulationHandler.FirePanStartEvent(Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)">
+            <summary>
+            触发平移事件
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.ManipulationHandler.FirePanEndEvent(Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)">
+            <summary>
+            触发平移事件
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Events.ManipulationHandler.PanStart">
+            <summary>
+            平移开始
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Events.ManipulationHandler.Pan">
+            <summary>
+            平移事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Events.ManipulationHandler.PanEnd">
+            <summary>
+            平移开始
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Events.ManipulationHandler.PinchStretchEnd">
+            <summary>
+            收缩拉伸事件结束
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Events.ManipulationHandler.PinchStretchStart">
+            <summary>
+            收缩拉伸事件开始
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Events.ManipulationHandler.PinchStretch">
+            <summary>
+            收缩拉伸事件
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Events.MapEvents">
+            <summary>
+            地图操作事件触发
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Events.MapEvents.manipulationProcessor">
+            <summary>
+            手势处理
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.MapEvents.#ctor(Com.AMap.Maps.Api.AMap)">
+            <summary>
+            构造函数，需要地图实例
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.MapEvents.manipulationProcessor_Pan(System.Object,Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)">
+            <summary>
+            平移
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.MapEvents.manipulationProcessor_PanStart(System.Object,Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)">
+            <summary>
+            平移开始
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Events.MapEvents.IsActive">
+            <summary>
+            是否激活控件
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Events.MapRoutedEventArgs">
+            <summary>
+            地图事件参数
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Events.MapRoutedEventArgs.#ctor">
+            <summary>
+            构造地图基础事件
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Events.MapRoutedEventArgs.Type">
+            <summary>
+            事件类型名称
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Events.MapRoutedEventArgs.SetType">
+            <summary>
+            设置类型
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Layers.AMapRoadTileSource">
+            <summary>
+            切片渲染资源
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Layers.TileSource">
+            <summary>
+            切片渲染资源
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.TileSource.GetTilesUrl(System.Int32,System.Int32,System.Int32)">
+            <summary>
+             获取切片服务地址
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.TileSource.GetValidatedZoomLevel(System.Int32)">
+            <summary>
+            验证z值
+            </summary>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Layers.TileSource.IsBaseLayer">
+            <summary>
+            是否是底图
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.TileSource.Url">
+            <summary>
+            切片的网络地址
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.AMapRoadTileSource.GetTilesUrl(System.Int32,System.Int32,System.Int32)">
+            <summary>
+             获取切片服务地址
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.AMapRoadTileSource.ZoomRange">
+            <summary>
+            地图级别范围
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Layers.AMapTrafficTileSource">
+            <summary>
+            切片渲染资源 实时交通
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.AMapTrafficTileSource.GetTilesUrl(System.Int32,System.Int32,System.Int32)">
+            <summary>
+             获取切片服务地址
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.AMapTrafficTileSource.ZoomRange">
+            <summary>
+            地图级别范围
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Layers.AMapSatelliteTileSource">
+            <summary>
+            卫星图
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.AMapSatelliteTileSource.GetTilesUrl(System.Int32,System.Int32,System.Int32)">
+            <summary>
+             获取切片服务地址
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.AMapSatelliteTileSource.ZoomRange">
+            <summary>
+            地图级别范围
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Layers.TileInfo">
+            <summary>
+            切片信息
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Layers.TileInfo._UnauthorizedAccessException">
+            <summary>
+            如果有值 说明app没有给写入权限
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.TileInfo.X">
+            <summary>
+            切片X轴编号
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.TileInfo.Y">
+            <summary>
+            切片Y轴编号
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.TileInfo.Z">
+            <summary>
+            切片Z轴信息
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.TileInfo.LayerId">
+            <summary>
+            切片所在图层Id
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Layers.MapLayer">
+            <summary>
+            覆盖物层级管理
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.SetParent(Windows.UI.Xaml.UIElement,System.Object)">
+            <summary>
+            设置给定对象的Parent的附加属性值。
+            </summary>
+            <param name="element">向其中写入属性值的对象。</param>
+            <param name="value">Parent属性值。</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.GetParent(Windows.UI.Xaml.UIElement)">
+            <summary>
+            获取给定对象的Parent附加属性的值。
+            </summary>
+            <param name="element">从中读取属性值的对象。</param>
+            <returns>指定对象的Parent值。</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.SetLngLat(Windows.UI.Xaml.UIElement,Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            设置给定对象的LngLat附加属性的值。
+            </summary>
+            <param name="element">向其中写入属性值的对象。</param>
+            <param name="value">LngLat属性值。</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.GetLngLat(Windows.UI.Xaml.UIElement)">
+            <summary>
+            获取给定对象的LngLat附加属性的值。
+            </summary>
+            <param name="element">从中读取属性值的对象。</param>
+            <returns>指定对象的LngLat值。</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.SetAnchor(Windows.UI.Xaml.UIElement,Windows.Foundation.Point)">
+            <summary>
+            设置指定对象的Anchor附加属性的值。
+            </summary>
+            <param name="element">向其中写入属性值的对象。</param>
+            <param name="value">Anchor属性值。</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.GetAnchor(Windows.UI.Xaml.UIElement)">
+            <summary>
+            获取给定对象的Anchor附加属性的值。
+            </summary>
+            <param name="element">从中读取属性值的对象。</param>
+            <returns>指定对象的Anchor值。</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.GetMapLayer(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            获取父容器里的MapLayer
+            </summary>
+            <param name="ml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.#ctor(Com.AMap.Maps.Api.AMap)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="map"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.SetOverlaysFitView">
+            <summary>
+            将该层的所有可视的(Visible)并添加到该图层的Overlay对象调整在视野范围内  调整的对象暂不支持自定义容器
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapLayer.SendToTop(Windows.UI.Xaml.UIElement)">
+            <summary>
+            移动元素至该图层最上层。
+            </summary>
+            <param name="element">指定元素。</param>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.MapLayer.LngLatProperty">
+            <summary>
+            标识LngLat附加属性，该属性表示给定元素的经纬度坐标。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.MapLayer.AnchorProperty">
+            <summary>
+            标识Anchor附加属性，该属性表示给定元素的锚点位置。
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Layers.MapTileLayer">
+            <summary>
+            地图层
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Layers.MapTileLayer.BaseSize">
+            <summary>
+            切片大小
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Layers.MapTileLayer.IsDoubleClick">
+            <summary>
+            根据此参数确定是不是要延迟清理图层
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Layers.MapTileLayer.ResetAndQuestCell(System.Boolean)">
+            <summary>
+            重新计算数组 请求需要的切片
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.MapTileLayer.CoordinateSystemType">
+            <summary>
+            允许用户设置指定的投影坐标系 默认为墨卡托
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Layers.MapTileLayer.CoordinateReferenceSystem">
+            <summary>
+            可以设置指定的坐标参照系  以后扩展接口 允许用户自定一坐标参照系
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Overlays.AEllipse">
+            <summary>
+             椭圆覆盖物
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Overlays.IOverlay">
+            <summary>
+            覆盖物接口
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.IOverlay.ReDraw">
+            <summary>
+            重新绘制
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.IOverlay.GetLngLatBounds">
+            <summary>
+            获取经纬度范围
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.IOverlay.MapInstance">
+            <summary>
+            获得地图对象
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.AEllipse._point">
+            <summary>
+            经纬度坐标
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.AEllipse._path">
+            <summary>
+            点的图形
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.AEllipse.ellipseGeometry">
+            <summary>
+            椭圆
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AEllipse.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <summary>
+            必须设置经纬度才能显示
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AEllipse.#ctor(Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            椭圆覆盖物
+            </summary>
+            <param name="lngLat">点的位置</param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AEllipse.SetEllipseGeometryRadiusXY(System.Int32,System.Int32)">
+            <summary>
+            设置半径
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AEllipse.ReDraw">
+            <summary>
+            重绘图形
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AEllipse.GetLngLatBounds">
+            <summary>
+            获得区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.RadiusX">
+            <summary>
+            椭圆横轴半径 单位像素
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.RadiusY">
+            <summary>
+            椭圆椭圆纵轴半径 单位像素
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.FillOpacity">
+            <summary>
+            填充透明度
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.FillColor">
+            <summary>
+            填充颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.StrokeColor">
+            <summary>
+            边框颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.StrokeThickness">
+            <summary>
+            填充颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.LngLat">
+            <summary>
+            获取经纬度
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.MapInstance">
+            <summary>
+            获取地图对象
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AEllipse.Anchor">
+            <summary>
+            锚点值 取值0->1 左上为Point(0,0)  右下为中心点为Point(1,1)
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Overlays.APolyline">
+            <summary>
+            线覆盖物
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.APolyline.GetLngLatBounds">
+            <summary>
+            获得区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._lineColor">
+            <summary>
+            线的颜色
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._lineType">
+            <summary>
+            线的样式
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._lineThickness">
+            <summary>
+            线的粗细
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._polyLineSegment">
+            <summary>
+            定义为一系列点的一组线段，其中的每个点都指定一个线段的终点。
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._pointCollection">
+            <summary>
+            点的像素 坐标集合
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._pathFigure">
+            <summary>
+            表示几何图形的一个子部分、一系列单独连接的二维几何线段。
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._pathData">
+            <summary>
+            表示一个可能由弧、曲线、椭圆、直线和矩形组成的复杂形状
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._path">
+            <summary>
+            图形
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.APolyline.#ctor">
+            <summary>
+            线覆盖物
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.APolyline.#ctor(System.Collections.Generic.IEnumerable{Com.AMap.Maps.Api.BaseTypes.ALngLat})">
+            <summary>
+            线覆盖物
+            </summary>
+            <param name="lnglats"></param>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline.isClip">
+            <summary>
+            是否裁剪
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.APolyline.ReDraw">
+            <summary>
+            重新绘制
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolyline._isVisible">
+            <summary>
+            覆盖物是否显示
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.DefaultLineColor">
+            <summary>
+            默认线的颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.DefaulLineThickness">
+            <summary>
+            默认线的粗细
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.LngLats">
+            <summary>
+            需要绘制的经纬度集合
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.LineThickness">
+            <summary>
+            线的粗细
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.LineType">
+            <summary>
+            线的类型
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.LineColor">
+            <summary>
+            线的颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.MapInstance">
+            <summary>
+            获取地图对象
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.PathData">
+            <summary>
+            The System.Windows.Media.PathGeometry of the PathData object
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.InVisibility">
+            <summary>
+            内部使用显示隐藏 区别用户真实想隐藏还是不在屏幕范围内优化隐藏
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolyline.Visibility">
+            <summary>
+            地图上有功能的显示隐藏
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Overlays.APolygon">
+            <summary>
+            多边形覆盖物
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.APolygon.GetLngLatBounds">
+            <summary>
+            获得区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._fillColor">
+            <summary>
+            多边形的填充颜色
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._fillOpacity">
+            <summary>
+            填充的透明度 0->1取值1为不透明
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._brush">
+            <summary>
+            填充样式
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._lineColor">
+            <summary>
+            线的颜色
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._lineType">
+            <summary>
+            线的样式
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._lineThickness">
+            <summary>
+            线的粗细
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._polyLineSegment">
+            <summary>
+            定义为一系列点的一组线段，其中的每个点都指定一个线段的终点。
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._pointCollection">
+            <summary>
+            点的像素 坐标集合
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._pathFigure">
+            <summary>
+            表示几何图形的一个子部分、一系列单独连接的二维几何线段。
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._pathData">
+            <summary>
+            表示一个可能由弧、曲线、椭圆、直线和矩形组成的复杂形状
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.APolygon._path">
+            <summary>
+            图形
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.APolygon.#ctor">
+            <summary>
+            多边形初始化
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.APolygon.#ctor(System.Collections.Generic.IEnumerable{Com.AMap.Maps.Api.BaseTypes.ALngLat})">
+            <summary>
+            多边形初始化
+            </summary>
+            <param name="lnglats"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.APolygon.ReDraw">
+            <summary>
+            重新绘制
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.DefaultFillColor">
+            <summary>
+            默认填充颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.DefaultFillOpacity">
+            <summary>
+            默认填充的透明度
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.DefaultLineColor">
+            <summary>
+            默认线的颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.DefaulLineThickness">
+            <summary>
+            默认线的粗细
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.LngLats">
+            <summary>
+            需要绘制的经纬度集合
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.LineThickness">
+            <summary>
+            线的粗细
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.LineType">
+            <summary>
+            线的类型
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.FillColor">
+            <summary>
+            填充颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.Fill">
+            <summary>
+             填充样式 Sets or gets the fill color for the shape. IsClosed==true 才有填充颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.FillOpacity">
+            <summary>
+            填充的透明度 0->1取值1为不透明
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.LineColor">
+            <summary>
+            线的颜色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.MapInstance">
+            <summary>
+            获取地图对象
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.APolygon.PathData">
+            <summary>
+            The System.Windows.Media.PathGeometry of the PathData object
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Overlays.ATip">
+            <summary>
+            弹出信息
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.ATip.#ctor">
+            <summary>
+            标记物
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Overlays.ATip.TipCloseClick">
+            <summary>
+            点击Tip的关闭按钮时触发事件
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.Title">
+            <summary>
+            信息标题
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.ContentText">
+            <summary>
+            信息内容
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.ContentPanel">
+            <summary>
+            内容容器
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.TitlePanel">
+            <summary>
+            标题容器
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.TitleBackgroundColor">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.ContentBackgroundColor">
+            <summary>
+            内容背景色
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.ContentTextBlock">
+            <summary>
+            内容TextBlock
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.TitleTextBlock">
+            <summary>
+            标题TextBlock
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.ATip.MapInstance">
+            <summary>
+            获取地图对象
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Overlays.AMarker">
+            <summary>
+            标记覆盖物
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AMarker.GetLngLatBounds">
+            <summary>
+            获得区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.AMarker.image">
+            <summary>
+            MMarker 显示的图片
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.AMarker._point">
+            <summary>
+            经纬度坐标
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AMarker.#ctor">
+            <summary>
+             标记覆盖物
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AMarker.#ctor(Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+             标记覆盖物
+            </summary>
+            <param name="lngLat"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AMarker.ReDraw">
+            <summary>
+            重新绘制
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.Overlays.AMarker._tipFrameworkElement">
+            <summary>
+            覆盖物的附属Tip
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AMarker.GetTipLngLat">
+            <summary>
+            默认在图标的中上方
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AMarker.OpenTip">
+            <summary>
+            如果覆盖物对象没有添加到地图上本方法无效
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Overlays.AMarker.ReSetTip">
+            <summary>
+            重新设置TIP 位置
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Overlays.AMarker.EditStart">
+            <summary>
+            编辑开始事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Overlays.AMarker.Editing">
+            <summary>
+            编辑中事件
+            </summary>
+        </member>
+        <member name="E:Com.AMap.Maps.Api.Overlays.AMarker.EditEnd">
+            <summary>
+            编辑结束事件
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.IsActiveEdit">
+             <summary>
+            是否可以编辑
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.IconURI">
+            <summary>
+            更改（获取）默认设置的 IconURL,可以是本地资源,也可以是远程图片。目前只支持JPG和PNG格式图片，且图片越大，加载速度越慢。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.Anchor">
+            <summary>
+            锚点值 取值0->1 左上为Point(0,0)  右下为中心点为Point(1,1)
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.LngLat">
+            <summary>
+            获取经纬度
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.DefaultIconURI">
+            <summary>
+            更改（获取）默认设置的 IconURL
+            </summary>
+            <remarks>
+            可以是本地资源 也可以是远程图片 不能是GIF图
+            </remarks>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.MapInstance">
+            <summary>
+            获取地图对象
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.DefaultAnchor">
+            <summary>
+            更改（获取）默认设置的 Anchor(锚点)
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.TipFrameworkElement">
+            <summary>
+            附属在覆盖上的 Tip 容器(允许用户自定义TIP为任意容器)
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.TipAnchor">
+            <summary>
+            设置 TIP 显示在 AMarker中上部 的锚点 默认 (0.5, 1)
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Maps.Api.Overlays.AMarker.TipLngLat">
+            <summary>
+            获取和设置 要显示TIP的位置
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.TipLayer">
+            <summary>
+            tip管理层
+            </summary>
+        </member>
+        <member name="F:Com.AMap.Maps.Api.TipLayer._CurrentTip">
+            <summary>
+            当前的TIP
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.TipLayer._CurrentTip_TipCloseClick(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            点击关闭TIP按钮
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.TipLayer.CloseTip">
+            <summary>
+            关闭TIP
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.Utilities">
+            <summary>
+            公共类
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.HexToColor(System.String)">
+            <summary>
+            将十六进制字符串换算成颜色，将16为颜色 Color对象 调用方式Utilities.Utilities.HexToColor("#a3b4ff");
+            </summary>
+            <param name="hexValue">将16为颜色 Color值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.CalculateBounds(System.Collections.Generic.IEnumerable{Com.AMap.Maps.Api.BaseTypes.ALngLat})">
+            <summary>
+            计算Bounds 频繁计算影响性能
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.ColorFromHexString(System.String)">
+            <summary>
+            字符产类型的颜色值转为Color类型
+            </summary>
+            <param name="HexColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.IntersectsBounds(Windows.Foundation.Rect,Windows.Foundation.Rect)">
+            <summary>
+            判断Rect是否相交
+            </summary>
+            <param name="bounds1">第一个区域</param>
+            <param name="bounds2">第二个区域</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities._intersectsBounds(Windows.Foundation.Rect,Windows.Foundation.Rect)">
+            <summary>
+            比较大的Rect和小Rect之间是否相交
+            </summary>
+            <param name="bounds">大</param>
+            <param name="smallBounds">小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.MLngLatIsInPolygon(Com.AMap.Maps.Api.BaseTypes.ALngLat,System.Collections.ObjectModel.ObservableCollection{Com.AMap.Maps.Api.BaseTypes.ALngLat})">
+            <summary>
+            判断点是否在多边形内
+            </summary>
+            <param name="lnglat">点的经纬度坐标</param>
+            <param name="lnglats">多边形的顶点坐标</param>
+            <returns>点是否在多边形内的参数</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.computeAngleByPoints(Windows.Foundation.Point,Windows.Foundation.Point)">
+            <summary>
+            已知两地理坐标点，求两点夹角
+            </summary>
+            <param name="point1">直线起点经纬度坐标</param>
+            <param name="point2">直线终点经纬度坐标</param>
+            <returns>两点之间的距离</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.OffSetElement(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            元素偏移量
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetClipLine(Windows.Foundation.Rect,Windows.UI.Xaml.Media.PointCollection)">
+            <summary>
+            Sutherland—Hodgman 裁剪线
+            </summary>
+            <param name="clipRect">矩形</param>
+            <param name="line">需要被裁剪的线</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.BytesToStream(System.Byte[])">
+            <summary> 
+            将 byte[] 转成 Stream 
+            </summary> 
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetLngLatByLngOffset(Com.AMap.Maps.Api.BaseTypes.ALngLat,System.Double)">
+            <summary>
+            已知一点坐标及两点间距离求另一点坐标，两点间距离为经度距离
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.CalculateDistance(Com.AMap.Maps.Api.BaseTypes.ALngLat,Com.AMap.Maps.Api.BaseTypes.ALngLat)">
+            <summary>
+            计算2点间距离
+            </summary>
+            <param name="lngLat1"></param>
+            <param name="lngLat2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.CalcAngle(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            已知两个点的经纬度坐标，求与正北方向的夹角
+            </summary>
+            <param name="fStartLon"></param>
+            <param name="fStartLat"></param>
+            <param name="fEndLon"></param>
+            <param name="fEndLat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetRectClipPointCollection(Windows.Foundation.Rect,Windows.UI.Xaml.Media.PointCollection)">
+            <summary>
+            裁剪后的点集合
+            </summary>
+            <param name="big"></param>
+            <param name="clips"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetPointFromLines(Windows.Foundation.Point,Windows.Foundation.Point,Windows.Foundation.Point,Windows.Foundation.Point)">
+            <summary>
+            获取线线焦点
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetPointFromRectClip(Windows.Foundation.Rect,Windows.Foundation.Point,Windows.Foundation.Point)">
+            <summary>
+            取得矩形和线的交叉点
+            </summary>
+            <param name="big"></param>
+            <param name="st"></param>
+            <param name="ed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.PT2LineSegmentDist(Windows.Foundation.Point,Windows.Foundation.Point,Windows.Foundation.Point,Windows.Foundation.Point@)">
+            <summary>
+            返回点到线段的最短距离点
+            </summary>
+            <param name="LineStart"> 线段（两个端点坐标x1,y1,x2,y2顺序）</param>
+            <param name="LineEnd">点(x,y)</param>
+            <param name="PtA">返回结果的数组(可能为垂足，端点1，端点2)</param>
+            <param name="PtB">返回结果的数组(可能为垂足，端点1，端点2)</param>
+            <returns>线段长度的平方</returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetUniqueId">
+            <summary>
+            获取唯一id（网卡id） 替代imei
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetTime">
+            <summary>
+            格林威治时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetPKG">
+            <summary>
+            应用程序包名或程序名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetAppVersion">
+            <summary>
+            获取APP的版本号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetNettype">
+            <summary>
+            获得网络类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetApiVersion">
+            <summary>
+            API的版本号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetModel">
+            <summary>
+            获取设备名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetResolution">
+            <summary>
+            终端屏幕分辨率
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetClienttype">
+            <summary>
+            客户端类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.Utilities.GetSys_ver">
+            <summary>
+            操作系统版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Maps.Api.HttpHelper.CreateHttpClient(System.Net.Http.HttpClient@)">
+            <summary>
+            创建连接
+            </summary>
+            <param name="httpClient"></param>
+        </member>
+        <member name="T:Com.AMap.Maps.Api.PlugInHandler">
+            <summary>
+            Map
+            </summary>
+        </member>
+    </members>
+</doc>

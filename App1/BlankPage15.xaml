@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="App1.BlankPage15"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton Icon="Home" Label="返回主页" Click="AppBarButton_Click" />
+                <AppBarSeparator/>
+                <AppBarButton Icon="Back" Label="返回上一页" Click="AppBarButton_Click1" />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <Grid x:Name="mapview1" Margin="10,178,556,75"/>
+        <StackPanel HorizontalAlignment="Left" Height="513" Margin="840,180,0,0" VerticalAlignment="Top" Width="465">
+            <Image Width="440" Source="Assets/DSC_0997.jpg" Height="195" Margin="13,0,12,0"/>           
+                <RichTextBlock Height="357" Width="405" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Paragraph>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="              湖畔餐厅" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      君城湖畔餐厅位于中山大学行政楼一楼，毗邻湖水，靠近公教楼和图书馆。有早、中、晚餐以及下午茶供应。湖畔餐厅供应的饭菜较四大饭堂更为精致，价位也高于四大饭堂。然而由于其位置靠近教学楼以及图书馆，方便了在教学区学习的同学们就餐的需要，因此深受好评。湖畔餐厅环境幽雅，食物精致。而一个较为明显的问题是其餐厅面积偏小，座位较为短缺，对同学们的就餐造成了一定的影响。" FontFamily="Global User Interface" FontSize="20"/>
+                    </Paragraph>
+                </RichTextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
+

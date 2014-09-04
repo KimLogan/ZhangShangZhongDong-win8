@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>KIM-PC</Machine>
+    <WindowsUser>Kim</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>1a96a700-58fa-40e4-89ae-14d889f366e3</PackageIdentityName>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\App1.exe">
+      <PackagePath>App1.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\SDK\Com.AMap.Maps.Api.dll">
+      <PackagePath>Com.AMap.Maps.Api.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\SDK\Com.AMap.Search.API.winmd">
+      <PackagePath>Com.AMap.Search.API.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\01.jpg">
+      <PackagePath>Assets\01.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\bus.jpg">
+      <PackagePath>Assets\bus.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\DSC_0997.jpg">
+      <PackagePath>Assets\DSC_0997.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\DSC_1000.jpg">
+      <PackagePath>Assets\DSC_1000.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\DSC_1003.jpg">
+      <PackagePath>Assets\DSC_1003.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\DSC_1006.jpg">
+      <PackagePath>Assets\DSC_1006.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\east1.jpg">
+      <PackagePath>Assets\east1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\gate.jpg">
+      <PackagePath>Assets\gate.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\GOGO.jpg">
+      <PackagePath>Assets\GOGO.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\higherCenter.jpg">
+      <PackagePath>Assets\higherCenter.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\library.jpg">
+      <PackagePath>Assets\library.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\LOGO.jpg">
+      <PackagePath>Assets\LOGO.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\logo310-150.scale-100.jpg">
+      <PackagePath>Assets\logo310-150.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\LOGO_30.scale-100.jpg">
+      <PackagePath>Assets\LOGO_30.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\LOGO_70.scale-100.jpg">
+      <PackagePath>Assets\LOGO_70.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\LOGO_90.scale-180.jpg">
+      <PackagePath>Assets\LOGO_90.scale-180.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\route.jpg">
+      <PackagePath>Assets\route.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\south.jpg">
+      <PackagePath>Assets\south.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\sports.jpg">
+      <PackagePath>Assets\sports.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\Square150x150Logo.scale-100.jpg">
+      <PackagePath>Assets\Square150x150Logo.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\team.jpg">
+      <PackagePath>Assets\team.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\back.png">
+      <PackagePath>Assets\back.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\food.png">
+      <PackagePath>Assets\food.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\recommendRoute.png">
+      <PackagePath>Assets\recommendRoute.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\SplashScreen.scale-140.png">
+      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\userRoute.png">
+      <PackagePath>Assets\userRoute.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\About.xbf">
+      <PackagePath>About.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage1.xbf">
+      <PackagePath>BlankPage1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\Introduction.xbf">
+      <PackagePath>Introduction.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage12.xbf">
+      <PackagePath>BlankPage12.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage13.xbf">
+      <PackagePath>BlankPage13.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage14.xbf">
+      <PackagePath>BlankPage14.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage15.xbf">
+      <PackagePath>BlankPage15.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage16.xbf">
+      <PackagePath>BlankPage16.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage17.xbf">
+      <PackagePath>BlankPage17.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage6.xbf">
+      <PackagePath>BlankPage6.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage7.xbf">
+      <PackagePath>BlankPage7.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage8.xbf">
+      <PackagePath>BlankPage8.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage9.xbf">
+      <PackagePath>BlankPage9.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\bus1.xbf">
+      <PackagePath>bus1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\Common\StandardStyles.xbf">
+      <PackagePath>Common\StandardStyles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\EastCampus.xbf">
+      <PackagePath>EastCampus.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\food.xbf">
+      <PackagePath>food.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\Page1.xbf">
+      <PackagePath>Page1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\Page2.xbf">
+      <PackagePath>Page2.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

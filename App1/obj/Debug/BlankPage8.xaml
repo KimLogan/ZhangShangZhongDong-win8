@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="App1.BlankPage8"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d">  
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton x:ConnectionId='1' Icon="Home" Label="返回主页"                            />
+                <AppBarSeparator/>
+                <AppBarButton x:ConnectionId='2' Icon="Back" Label="返回上一页"                             />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <Grid x:Name="mapview1" Margin="10,178,556,75"/>
+        <StackPanel HorizontalAlignment="Left" Height="513" Margin="840,180,0,0" VerticalAlignment="Top" Width="465">
+            <Image Width="440" Source="Assets/GOGO.jpg"/>
+            <ScrollViewer Margin="0,0,0,10" Height="283">
+                <RichTextBlock Height="488" Width="405" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Paragraph>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="             GOGO新天地" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="      GOGO新天地是中山大学东校区乃至整个大学城范围内的综合性购物商业中心，一共四层。一层与二层为购物中心，主打服装、礼品、体育用品、电子产品、特色玩偶以及美容美发等服务，其上有一个生活动力超市和许多便利店。三层主打餐饮，在这一层你可以平常天南地北的各色美食小店，米饭、面食、涮锅、寿司、糖水、小吃等品种丰富，质量优异。第四层为V-BOX卡拉OK与盈点商务酒店地盘，并配有自助餐，可以满足您的住宿和娱乐需要。" FontFamily="Global User Interface" FontSize="20"/>
+                    </Paragraph>
+                </RichTextBlock>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>
+
+

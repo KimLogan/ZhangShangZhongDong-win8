@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="App1.BlankPage14"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d">  
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton x:ConnectionId='1' Icon="Home" Label="返回主页"                            />
+                <AppBarSeparator/>
+                <AppBarButton x:ConnectionId='2' Icon="Back" Label="返回上一页"                             />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <Grid x:Name="mapview1" Margin="10,178,556,75"/>
+        <StackPanel HorizontalAlignment="Left" Height="513" Margin="840,180,0,0" VerticalAlignment="Top" Width="465">
+            <RichTextBlock Height="488" Width="405" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="35,0,25,0">
+                <Paragraph>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Text="                   实验中心 " FontFamily="Global User Interface" FontSize="30" FontWeight="Bold"/>
+                </Paragraph>
+                <Paragraph>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Text="      教学实验中心是同学们参加各种计算机与电子技术、机器人等实验课程的大楼。在这里有各种实验室和机房，很多的计算机考试都是在这里进行。" FontFamily="Global User Interface" FontSize="20"/>
+                </Paragraph>
+            </RichTextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
+
+

@@ -1,0 +1,1919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Com.AMap.Search.API</name>
+    </assembly>
+    <members>
+        <member name="T:Com.AMap.Search.API.AMapSearchConfig">
+            <summary>
+            验证权限
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.AMapSearchConfig.Key">
+            <summary>
+            设置权限
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.BusLineSearch">
+            <summary>
+            公交引导信息搜索
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.BusLineSearch.BusSearchByBusId(System.String,System.String)">
+             <summary>
+            通过公交线路id搜索公交引导信息
+             </summary>
+             <param name="busIds">公交线路ID集合，多个ID之间采用半角“,”分隔</param>
+             <param name="city">城市区号</param>
+             <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.BusLineSearch.BusSearchByBusStation(System.String,System.String)">
+            <summary>
+             通过公交站点查询经过此公交站点的公交引导信息
+            </summary>
+            <param name="stationName">公交站点名称</param>
+            <param name="city">城市区号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.BusLineSearch.BusSearchByBusName(System.String,System.String)">
+            <summary>
+             通过公交线路名称搜索公交引导信息
+            </summary>
+            <param name="busLineName">公交线路名称</param>
+            <param name="city">城市区号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.BusLineSearch.BusLineSearchWithOption(Com.AMap.Search.API.Options.BusLineSearchOption)">
+            <summary>
+            通过查询参数类搜索公交引导信息
+            </summary>
+            <param name="opt">查询参数类</param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Search.API.GeoCode">
+            <summary>
+            地理编码类
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.GeoCode.AddressToGeoCode(System.String,System.Int32)">
+            <summary>
+            地理编码
+            </summary>
+            <param name="address">地址描述</param>
+            <param name="num">请求数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.GeoCode.AddressToGeoCodeWithOption(Com.AMap.Search.API.Options.GeoCodingOption)">
+            <summary>
+            根据参数选项信息进行地理编码
+            </summary>
+            <param name="opt">地理编码参数类</param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Search.API.BusRouteSearch">
+            <summary>
+            公交导航搜索类
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.BusRouteSearch.BusSearchByTwoPoi(System.Double,System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            通过起始点坐标进行公交导航搜索 
+            </summary>
+            <param name="startX">起始点经度</param>
+            <param name="startY">起始点纬度</param>
+            <param name="endX">终止点经度</param>
+            <param name="endY">终止点纬度</param>
+            <param name="cityCode">城市区号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.BusRouteSearch.BusRouteSearchWithOption(Com.AMap.Search.API.Options.BusRouteSearchOption)">
+            <summary>
+            通过参数类对象进行公交导航搜索。
+            </summary>
+            <param name="opt">参数类对象。</param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Search.API.Options.BusLineSearchOption">
+            <summary>
+            公交线路查询参数类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Options.BusLineSearchOption.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.Batch">
+            <summary>
+            分页号，表示显示第几页。默认值为1。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.BusName">
+            <summary>
+            公交名称。根据公交名称查询时，该属性为必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.CityCode">
+            <summary>
+            城市编码，必填项。以电话区号为准。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.Encode">
+             <summary>
+             字符编码格式。默认为 GBK。 
+            目前支持 GBK 和 UTF-8 编码格式。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.Ids">
+             <summary>
+             公交线路 id 集合。 
+            如果有多个 id 中间用","分割。根据线路 id 查询的时，该属性为必填项。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.Number">
+            <summary>
+            每页显示的结果数，默认值为10。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.ResData">
+             <summary>
+             是否返回线路坐标，默认值为0。 
+            根据公交名称或者公交线路查询时，需要对该属性进行设置。 
+            当为 0 时，表示不返回线路坐标。 
+            当为 1 时，表示返回线路坐标。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.StationName">
+            <summary>
+            公交站点名称。根据公交站点查询时，该属性为必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.ResType">
+            <summary>
+            返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，
+            支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 XMLXML 与 JSON JSONJSON，
+            不区分大小写，默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，
+            不区分大小写默认为 XMLXML 格式
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusLineSearchOption.Sid">
+            <summary>
+            服务编码 默认8085-根据线路ID查询Ids不能为空  8004-根据线路名称查询  8086-根据站点名称查询
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Options.BusRouteSearchOption">
+            <summary>
+            公交换乘查询参数类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Options.BusRouteSearchOption.#ctor">
+            <summary>
+            公交换乘查询参数类
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.CityCode">
+            <summary>
+            城市编码，必填项。以电话区号为准。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.Encode">
+             <summary>
+             字符编码格式。默认为 GBK。 
+            目前支持 GBK 和 UTF-8 编码格式。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.RouteType">
+             <summary>
+             0表示最快捷模式，尽可能乘坐轨道交通和快速公交线路；
+            2表示最少换乘模式，尽可能减少换乘次数；
+            3表示最少步行模式，尽可能减少步行距离；
+            4表示最舒适模式，乘坐有空调的车线；
+            5表示纯地铁模式，只选择地铁换乘；
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.X1">
+            <summary>
+            起始点经度坐标，必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.Y1">
+            <summary>
+            起始点纬度坐标，必填项。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.X2">
+            <summary>
+            终点经度坐标，必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.Y2">
+            <summary>
+            终点纬度坐标，必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.XCoors">
+            <summary>
+            途经点的经度坐标集合。  最多支持13对途经点
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.YCoors">
+            <summary>
+            途经点的纬度坐标集合。  最多支持13对途经点
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.ResType">
+            <summary>
+            返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，
+            支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 XMLXML 与 JSON JSONJSON，
+            不区分大小写，默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，
+            不区分大小写默认为 XMLXML 格式
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.BusRouteSearchOption.Sid">
+            <summary>
+            服务编码 默认8085-根据线路ID查询Ids不能为空  8004-根据线路名称查询  8086-根据站点名称查询
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Options.RouteSearchOption">
+            <summary>
+            网络导航查询参数类
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Options.RouteSearchOption.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.Encode">
+            <summary>
+            字符编码格式，默认为 utf-8。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.AvoidName">
+            <summary>
+            名称避让。例如，避让一条道路。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.Per">
+            <summary>
+            抽稀参数，用于控制返回的坐标数量，默认值为150。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.AvoidRegion">
+             <summary>
+             区域避让，区域由(x，y)坐标点组成，如果是四边形则有四个坐标点，如果是五边形则有五个坐标点。 
+            通过“:”符号，区分避让区域；通过“;”符号，区分坐标对。
+            注意：避让的区域最多有32个，每个区域中最多有16个顶点。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.RouteType">
+             <summary>
+             导航规则，默认值为0。 
+            当 routeType=0 时，表示速度优先，即时间最短。 
+            当 routeType=1 时，表示费用优先，即不走收费路段的最优道路。 
+            当 routeType=2 时，表示距离优先。 
+            routeType=5不走快速路（不走快速路，不包含高速路）
+            routeType=6国道优先
+            routeType=7省道优先
+            routeType=8不走高速
+            当 routeType=9 时，表示同时使用速度优先、费用优先、距离优先三个策略计算路径。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.X1">
+            <summary>
+            起始点的经度坐标，必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.Y1">
+            <summary>
+            起始点的纬度坐标，必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.X2">
+            <summary>
+            终点经度坐标，必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.Y2">
+            <summary>
+            终点纬度坐标，必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.XCoors">
+            <summary>
+            途经点的经度坐标集合。  最多支持13对途经点
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.YCoors">
+            <summary>
+            途经点的纬度坐标集合。  最多支持13对途经点
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.ResType">
+            <summary>
+            返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，
+            支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 XMLXML 与 JSON JSONJSON，
+            不区分大小写，默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，
+            不区分大小写默认为 XMLXML 格式
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RouteSearchOption.Sid">
+            <summary>
+            服务编码
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.BusLineSearchResult">
+            <summary>
+            公交线路查询结果类。用于存储公交线路查询的结果信息。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.BusLineSearchResult.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLineSearchResult.Status">
+            <summary>
+            查询 状态， E0 表
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLineSearchResult.Count">
+            <summary>
+            根据权限或请求设置返回的结果数。默认最大结果集为 400。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLineSearchResult.Record">
+            <summary>
+            当前页返回的记录数。最大结果集为 20，可通过 key 权限修改。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLineSearchResult.Total">
+            <summary>
+            当前权限条件下满足查询条件的所有的记录数。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLineSearchResult.BusLineList">
+            <summary>
+            Busline 对象集合。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLineSearchResult.Erro">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.Station">
+            <summary>
+            车站描述
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.Station.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Station.Name">
+            <summary>
+            站名
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Station.XY">
+            <summary>
+            经纬度坐标
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Station.Code">
+            <summary>
+            地区编号
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Station.StationNum">
+            <summary>
+            车站号
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.BusLine">
+            <summary>
+            公交路线信息类。用于存储公交路线查询结果中的公交信息。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.BusLine.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.XYs">
+            <summary>
+            经过的坐标对集合
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Air">
+             <summary>
+             表示是否有空调。 
+            当为0时，表示没有空调；当为1时，表示有空调。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.AutoTicket">
+             <summary>
+             表示是否无人售票。 
+            当为0时，表示有售票员售票；当为1时，表示无人售票。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.BasicPrice">
+            <summary>
+            车票的基本价格。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.CommutationTicket">
+             <summary>
+             表示是否可以使用月票。 
+            当为0时，表示不可以使用月票；当为1时，表示可以使用月票。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Company">
+            <summary>
+            公交公司名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.DataSource">
+             <summary>
+             数据来源。 
+            当为1时，表示自行采集；当为0时，表示其他方式采集。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Description">
+            <summary>
+            公交线路的备注信息。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.DoubleDeck">
+             <summary>
+             表示公交车是否双层。 
+            当为0时，表示不是双层公交车；当为1时，表示是双层公交车。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.EndTime">
+             <summary>
+             末班发车时间。 
+            格式为 ”HHMM”，采用24小时时间制，即 0000-2359。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.ExpressWay">
+             <summary>
+             公共交通线是否路经高速道路。
+            当为0时，表示不经过高速公路；当为1时，表示经过高速公路。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.FrontName">
+            <summary>
+            始发站名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.FrontSpell">
+            <summary>
+            始发站名称，用拼音表示。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.IcCard">
+             <summary>
+             表示是否可以使用公交卡。 
+            当为0时，表示不能使用公交卡；当为1时，表示可以使用公交卡。
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Interval1">
+             <summary>
+             发车时间间隔1适用的时间段。 
+            采用起始时间空格截至时间表示，时间格式为 HHMM。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Interval2">
+             <summary>
+             发车时间间隔2适用的时间段。 
+            采用起始时间空格截至时间表示，时间格式为 HHMM。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Interval3">
+             <summary>
+             发车时间间隔3适用的时间段。 
+            采用起始时间空格截至时间表示，时间格式为 HHMM。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Interval4">
+             <summary>
+             发车时间间隔4适用的时间段。 
+            采用起始时间空格截至时间表示，时间格式为 HHMM。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Interval5">
+             <summary>
+             发车时间间隔5适用的时间段。 
+            采用起始时间空格截至时间表示，时间格式为 HHMM。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Interval6">
+             <summary>
+             发车时间间隔6适用的时间段。 
+            采用起始时间空格截至时间表示，时间格式为 HHMM。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Interval7">
+             <summary>
+             发车时间间隔7适用的时间段。 
+            采用起始时间空格截至时间表示，时间格式为 HHMM。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Interval8">
+             <summary>
+             发车时间间隔8适用的时间段。 
+            采用起始时间空格截至时间表示，时间格式为 HHMM。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.KeyName">
+            <summary>
+            线路名称的关键部分。 
+            如果线路名称 name 为 300 路内环(草桥--草桥)，则线路名称的关键部分 key_name 为 300 路内环。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Length">
+            <summary>
+            路线长度，单位:公里。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.LineId">
+            <summary>
+            线路唯一 id 标识。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Loop">
+             <summary>
+             是否环线，即没有起点，没有终点，周而复始，例如，地铁环线。 
+            当为0时，表示不是环线；当为1时，表示是环线。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Name">
+            <summary>
+            线路名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.ServicePeriod">
+            <summary>
+            服务时间周期描述，例如：夏季线路、周末线路、夜班车等。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Speed">
+             <summary>
+             线路的平均行驶速度，单位为 km/h。 
+            目前，以采集到的速度为准。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.StartTime">
+             <summary>
+             首班发车时间。 
+            格式为 ”HHMM”，采用24小时时间制，即 0000-2359。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Status">
+             <summary>
+             线路状态。 
+            当为 0 时，表示线路处于停止状态；当为 1 时，表示线路处于普通状态。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TerminalName">
+            <summary>
+            终点站名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TerminalSpell">
+            <summary>
+            终点站名称，用拼音表示。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeDesc">
+            <summary>
+            发车信息，即用文字来描述无特定发车规则或发车规律的发车信息。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeInterval1">
+            <summary>
+            发车时间间隔1。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeInterval2">
+            <summary>
+            发车时间间隔2。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeInterval3">
+            <summary>
+            发车时间间隔3。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeInterval4">
+            <summary>
+            发车时间间隔4。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeInterval5">
+            <summary>
+            发车时间间隔5。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeInterval6">
+            <summary>
+            发车时间间隔6。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeInterval7">
+            <summary>
+            发车时间间隔7。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TimeInterval8">
+            <summary>
+            发车时间间隔8。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.TotalPrice">
+             <summary>
+             车票的总价格。 
+            当为单一票价的时候，总价格=基本价格。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.Type">
+            <summary>
+            线路类型。 1表示普通公交，2表示地铁 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusLine.StationList">
+            <summary>
+            Station 对象集合。
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.BusRouteSearchResult">
+            <summary>
+            公交换乘查询结果类。用于存储公交换乘查询的结果信息。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.BusRouteSearchResult.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusRouteSearchResult.Status">
+            <summary>
+            查询 状态， E0 表
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusRouteSearchResult.Count">
+            <summary>
+            导航段数。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusRouteSearchResult.SearchTime">
+            <summary>
+            查询时间。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusRouteSearchResult.Routes">
+            <summary>
+            MBus 数组，用来存储 Bus 对象数组。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusRouteSearchResult.Erro">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.Bus">
+            <summary>
+            公交换乘方案类。用户存储公交换乘查询结果中的公交换乘方案信息。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.Bus.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Bus.Bounds">
+            <summary>
+            外接矩形范围，即矩形的左上右下坐标对。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Bus.FootEndLength">
+            <summary>
+            换乘步行长度。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Bus.SegmentArray">
+            <summary>
+            MSegment 对象数组。
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.BusSegment">
+            <summary>
+            路段信息类。用于存储公交换乘查询结果中换乘方案包含的路段信息。  
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.BusSegment.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.BusName">
+            <summary>
+            公交名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.CoordinateList">
+            <summary>
+            途经线路坐标串。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.DriveLength">
+            <summary>
+            行驶距离。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.EndName">
+            <summary>
+            终点站名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.FootLength">
+            <summary>
+            步行距离。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.PassDeportCoordinate">
+            <summary>
+            途经站点坐标。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.PassDeportCount">
+            <summary>
+            途经站点数。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.PassDeportName">
+            <summary>
+            途经站名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.BusSegment.StartName">
+            <summary>
+            起始站名称。 
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.RouteSearchResult">
+            <summary>
+            网络导航查询结果类。用于存储网络导航查询的结果信息。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.RouteSearchResult.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSearchResult.Status">
+            <summary>
+            查询 状态， E0 表
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSearchResult.Bounds">
+            <summary>
+            外接矩形范围，即矩形的左上右下坐标对。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSearchResult.Coors">
+            <summary>
+            行驶路段坐标串，格式为(x1,y1,x2,y2,x3,y3....)。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSearchResult.Count">
+            <summary>
+            导航段数，即导航过程中路径被划分的段数。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSearchResult.Segment">
+            <summary>
+            MARoute 对象数组，存储返回的路段信息。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSearchResult.Erro">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.RouteSegment">
+            <summary>
+            路段导航信息
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.RouteSegment.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.RoadName">
+            <summary>
+            道路名称
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.LocationCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.Direction">
+            <summary>
+            行驶方向
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.RoadLength">
+            <summary>
+            行驶距离
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.Action">
+            <summary>
+            辅助动作，行驶方向
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.AccessorialInfo">
+            <summary>
+            动作访问方式
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.DriveTime">
+            <summary>
+            行驶时间
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.Grade">
+            <summary>
+            道路等级
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.Form">
+            <summary>
+            道路类型描述
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.TextInfo">
+            <summary>
+            此段道路行使信息描述
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RouteSegment.Coor">
+            <summary>
+            行驶路段坐标
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.RGCSearch">
+            <summary>
+            坐标转换类，将GPS采集的真实经纬度通过坐标转换接口转换为高德坐标。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.RGCSearch.GPSToOffset(System.Double,System.Double)">
+            <summary>
+            真实坐标转转换为高德坐标
+            </summary>
+            <param name="poiX">经度</param>
+            <param name="poiY">纬度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.RGCSearch.GPSToOffsetWithOption(Com.AMap.Search.API.Options.RGCSearchOption)">
+            <summary>
+            根据参数选项计算转换为高德坐标
+            </summary>
+            <param name="opt">参数类</param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Search.API.Options.GeoCodingOption">
+            <summary>
+            地理编码参数类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Options.GeoCodingOption.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.GeoCodingOption.ResType">
+            <summary>
+            返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，
+            支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 XMLXML 与 JSON JSONJSON，
+            不区分大小写，默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，
+            不区分大小写默认为 XMLXML 格式
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.GeoCodingOption.Sid">
+            <summary>
+            服务编码
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.GeoCodingOption.Address">
+            <summary>
+            查询地址。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.GeoCodingOption.Encode">
+            <summary>
+            字符编码格式。 默认为 UTF-8。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.GeoCodingOption.Count">
+             <summary>
+            返回数量。默认值为10。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.GeoCodingOption.ScoreFilter">
+            <summary>
+            可选参数 限定只返回大于指定权重（score）的结果，权重值为小数 <!--数据的相似度（即权重值），取值范围0-1，越接近1越相似-->
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.GeoCodingOption.City">
+            <summary>
+            可选参数 城市名，支持传入城市名称、城市区号、城市代码（如adcode，行政区划省市区）
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.GeoCodingOption.ShowSub">
+            <summary>
+            是否显示一些详细信息，如门牌号，值为true或者false，默认为true，显示详细信息。
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Options.RGCSearchOption">
+            <summary>
+            坐标转换参数类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Options.RGCSearchOption.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RGCSearchOption.ResType">
+            <summary>
+            返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，
+            支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 XMLXML 与 JSON JSONJSON，
+            不区分大小写，默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，
+            不区分大小写默认为 XMLXML 格式
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RGCSearchOption.Sid">
+            <summary>
+            服务编码 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RGCSearchOption.GPS">
+            <summary>
+            服务编码 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RGCSearchOption.Glong">
+            <summary>
+            经度坐标
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RGCSearchOption.Glat">
+            <summary>
+            纬度坐标
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.RGCSearchOption.Encode">
+            <summary>
+            字符编码格式。默认为 GBK。 
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Options.ReverseGeocodingOption">
+            <summary>
+            逆地理编码参数类。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Options.ReverseGeocodingOption.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.CrossNumber">
+            <summary>
+            返回周边交叉路口数量，默认值为 10。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.Encode">
+             <summary>
+             字符编码格式。默认为 GBK。 
+            目前支持 GBK 和 UTF-8 编码格式。 
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.PoiNumber">
+            <summary>
+            返回周边 POI 数量，默认值为 10。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.Range">
+            <summary>
+            设置周边热点 POI 和道路的距离范围，默认值为1000。单位：米。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.RoadNumber">
+            <summary>
+            返回周边道路数量，默认值为 10。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.XCoors">
+            <summary>
+            查询 x 坐标集合。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.YCoors">
+            <summary>
+            查询 y 坐标集合。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.Sid">
+            <summary>
+            服务编码
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.ReverseGeocodingOption.ResType">
+            <summary>
+            返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，
+            支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 XMLXML 与 JSON JSONJSON，
+            不区分大小写，默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，
+            不区分大小写默认为 XMLXML 格式
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.ReGeoCode">
+            <summary>
+            逆地理编码类
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.ReGeoCode.PoiToAddress(System.Double,System.Double)">
+            <summary>
+            单点位置描述
+            </summary>
+            <param name="poiX">经度坐标</param>
+            <param name="poiY">纬度坐标</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.ReGeoCode.MulPoiToAddress(System.Double[],System.Double[])">
+            <summary>
+            多点位置描述
+            </summary>
+            <param name="poisX">经度坐标集合</param>
+            <param name="poisY">纬度坐标集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.ReGeoCode.GeoCodeToAddressWithOption(Com.AMap.Search.API.Options.ReverseGeocodingOption)">
+            <summary>
+            根据参数选项进行逆地理编码
+            </summary>
+            <param name="opt">逆地理编码参数类</param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Search.API.POISearch">
+            <summary>
+            POI搜索类
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.POISearch.PoiSearchByKeywords(System.String,System.String,System.Int32)">
+            <summary>
+            关键字查询。
+            </summary>
+            <param name="keywords">查询关键字</param>
+            <param name="city">查询关键字所在城市的区号或名称；全国为total，默认为全国。</param>
+            <param name="poiCount">希望获得的poi个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.POISearch.PoiSearchByCenLngLat(System.Double,System.Double,System.String,System.String,System.Int32)">
+            <summary>
+            根据中心点的坐标(x,y), 查询周边POI。
+            </summary>
+            <param name="centerPoiX">查询中心点经度</param>
+            <param name="centerPoiY">查询中心点纬度</param>
+            <param name="keywords">查询关键字(必填,可以为空字符串,用户只按类型查询)</param>
+            <param name="city">查询关键字所在城市的区号或名称(必填),全国为total</param>
+            <param name="poiCount">希望获得的poi个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.POISearch.PoiSearchByCenKeywords(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            以给定关键字为中心点进行周边查询。
+            </summary>
+            <param name="centerKeywords">中心点关键词</param>
+            <param name="keywords">关键字</param>
+            <param name="city">城市号或名称,string类型,必填,全国为total</param>
+            <param name="poiCount">希望获得的poi个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.POISearch.PoiSearchByRegionAndKeyword(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            以拉框方式查询图形区域内的关键字信息，图形支持Circle（圆）、Ellipse（椭圆）、Rectangle（矩形）、Polygon（多边形）。
+            </summary>
+            <param name="keyword">关键字</param>
+            <param name="region">图形点集序列，描述图形的顶点与拐点。坐标点经、纬度间使用半角","隔开，坐标对间使用半角";"分隔。
+            如：x1,y1;x2,y2; x3,y3;x4,y4;x5,y5;目前支持四种图形类型：regionType=rectangle矩形左下、右上两个顶点的坐标regionType=polygon多边形
+            所有顶点的顺序坐标，且首尾坐标相同regionType=circle圆形外接矩形左上、右下两个顶点的坐标regionType=ellipse椭圆外接矩形左上、右下两个顶点的坐标</param>
+            <param name="regionType">图形 Circle（圆）、Ellipse（椭圆）、Rectangle（矩形）、Polygon（多边形）</param>
+            <param name="poiCount">希望返回的poi个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.POISearch.PoiSearchWithOption(Com.AMap.Search.API.Options.POISearchOption)">
+            <summary>
+            根据MPOISearchOption对象设置搜索参数进行POI搜索。
+            </summary>
+            <param name="opt">搜索参数类</param>
+            <returns></returns>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.GeoCodingResult">
+            <summary>
+            地理编码结果类。用于存储地理编码的结果信息。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.GeoCodingResult.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoCodingResult.Status">
+            <summary>
+            查询 状态， E0 表
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoCodingResult.Count">
+            <summary>
+            返回的记录条数。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoCodingResult.GeoCodingList">
+            <summary>
+             返回的地理兴趣点 MGeoPOI 对象数组。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoCodingResult.Erro">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.GeoPOI">
+            <summary>
+            地理编码POI信息类。用于存储地理编码结果中的兴趣点信息。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.GeoPOI.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Score">
+            <summary>
+            数据的相似度（即权重值），取值范围0-1，越接近1越相似
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Address">
+            <summary>
+            地址。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.City">
+            <summary>
+            城市名称。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.District">
+            <summary>
+            区域名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Eaddress">
+            <summary>
+            英文地址。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.ECity">
+            <summary>
+            英文城市名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Edistrict">
+            <summary>
+            英文区域名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Ename">
+            <summary>
+            英文名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Eprovince">
+            <summary>
+            英文省份。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Level">
+            <summary>
+            等级。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Name">
+            <summary>
+            名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Province">
+            <summary>
+            省份。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Range">
+            <summary>
+            范围。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.X">
+            <summary>
+            经度坐标。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Y">
+            <summary>
+            纬度坐标。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.GeoPOI.Roadpts">
+            <summary>
+            附近道路的坐标点集合
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.RGCSearchResult">
+            <summary>
+            坐标转换结果类。  
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.RGCSearchResult.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RGCSearchResult.Status">
+            <summary>
+            查询 状态， E0 表
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RGCSearchResult.Location">
+            <summary>
+            定位位置
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.RGCSearchResult.Erro">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.Location">
+            <summary>
+            定位位置
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.Location.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Location.Citycode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Location.Radius">
+            <summary>
+            精度范围 圆半径，单位：米
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Location.Cenx">
+            <summary>
+            高德坐标纬度
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Location.Ceny">
+            <summary>
+            高德坐标精度
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.ReverseGeoCodingResult">
+            <summary>
+            逆地理编码结果类。用于存储逆地理编码的结果信息。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.ReverseGeoCodingResult.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeoCodingResult.Status">
+            <summary>
+            查询 状态， E0 表
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeoCodingResult.resultList">
+            <summary>
+            逆地理编码查询结果类
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeoCodingResult.Erro">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.ReverseGeocodingInfo">
+            <summary>
+            地址解析信息类。用于存储逆地理编码结果信息。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.ReverseGeocodingInfo.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeocodingInfo.City">
+            <summary>
+            城市信息。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeocodingInfo.Crosses">
+            <summary>
+            道路交叉口信息。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeocodingInfo.District">
+            <summary>
+            区域信息。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeocodingInfo.Pois">
+            <summary>
+            POI 信息 MAPOI 对象列表。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeocodingInfo.Province">
+            <summary>
+            省份信息。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.ReverseGeocodingInfo.Roads">
+            <summary>
+            道路信息 MARoad 对象列表。 
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.City">
+            <summary>
+            城市信息类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.City.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.City.Code">
+            <summary>
+             地址编码。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.City.CityCode">
+            <summary>
+             城市编码。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.City.Name">
+            <summary>
+              城市名称。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.City.EnName">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.City.Tel">
+            <summary>
+            电话区号。
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.Cross">
+            <summary>
+            交叉路口信息类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.Cross.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Cross.Direction">
+            <summary>
+            交叉口走向。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Cross.X">
+            <summary>
+            交叉口经度坐标。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Cross.Y">
+            <summary>
+              交叉口纬度坐标。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Cross.Distance">
+            <summary>
+            距离
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Cross.Road1">
+            <summary>
+            道路信息
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Cross.Road2">
+            <summary>
+            道路信息
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.District">
+            <summary>
+            区域信息类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.District.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.District.Bounds">
+            <summary>
+             区域矩形范围。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.District.Code">
+            <summary>
+              区域编码。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.District.Name">
+            <summary>
+              区域名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.District.X">
+            <summary>
+            区域中心点经度坐标。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.District.Y">
+            <summary>
+            区域中心点纬度坐标。 
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.Province">
+            <summary>
+            省份信息类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.Province.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Province.Code">
+            <summary>
+            省份编码。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Province.Name">
+            <summary>
+            省份名称。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Province.EnName">
+            <summary>
+            省份英文名称。
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.Road">
+            <summary>
+            道路信息类。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.Road.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Road.Direction">
+            <summary>
+              道路方向。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Road.Distance">
+            <summary>
+             距离参数点距离。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Road.Ename">
+            <summary>
+            道路的英文名称。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Road.Id">
+            <summary>
+             道路 id。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Road.Level">
+            <summary>
+            道路等级。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Road.Name">
+            <summary>
+             道路名称。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.Road.Width">
+            <summary>
+             道路宽度。
+            </summary> 
+        </member>
+        <member name="T:Com.AMap.Search.API.Options.POISearchOption">
+            <summary>
+            兴趣点查询参数类。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Options.POISearchOption.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.RegionType">
+            <summary>
+            拉框方式查询图形区域内的关键字信息 拉框的类型 支持rectangle（矩形）、polygon（多边形）、circle（圆）、ellipse（椭圆）
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Region">
+            <summary>
+            图形点集序列，描述图形的顶点与拐点。坐标点经、纬度间使用半角","隔开，坐标对间使用半角";"分隔。
+            如：x1,y1;x2,y2; x3,y3;x4,y4;x5,y5;目前支持四种图形类型：RegionType=rectangle矩形左下、右上两个顶点的坐标RegionType=polygon多边形
+            所有顶点的顺序坐标，且首尾坐标相同RegionType=circle圆形外接矩形左上、右下两个顶点的坐标RegionType=ellipse椭圆外接矩形左上、右下两个顶点的坐标
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Batch">
+            <summary>
+            分页号，用于显示第几页。默认值为1。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.CenName">
+            <summary>
+             当中心点关键字 。 周边查询时，通过该属性指定中心点关键字，当 sid = 1001  1015 时，为必填项。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.CenX">
+            <summary>
+            经度坐标。 周边查询时，通过该属性指定中心点的经度坐标，当 config = BELSBXY 时，为必填。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.CenY">
+            <summary>
+            纬度坐标。 周边查询时，通过该属性指定中心点的纬度坐标，当 config = BELSBXY 时，为必填。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.CityCode">
+            <summary>
+            城市编号，默认为 total ，表示全国范围内查询。 城市编号与电话区号十分相似，但并不完全相同，其区别是：在多个城市使用同一个电话区号时，在城市编码中会进行区分。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Encode">
+            <summary>
+            字符编码格式，默认为 GBK 。 目前支持 GBK 和 UTF-8格式编码。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Naviflag">
+            <summary>
+            表示是否按照导航距离排序，默认值为0。 当 naviflag=0 时，表示不按照导航距离排序；当 naviflag=1 时，表示按照导航距离排序，但性能比直线距离排序差。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Sr">
+            <summary>
+            表示是否按照关键字排序，默认值为0。当 sr=0 时，表示按照关键字排序；当 sr=1时，表示按照距离排序。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.SrcType">
+             <summary>
+             数据源类型，默认值为 POI，表示基础库。 
+            数据源类型分为：英文库 mpoi、基础库 POI、 企业地标 DIBIAO、公交站台 BUS、通用编辑器 USERPOI，以上数据源可以混合查询。例如：公交数据+基础库数据查询BUS:1000%2bPOI，代表前1000条数据为公交数据，后面为基础库数据。
+             </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Number">
+            <summary>
+            每页显示的结果数，默认值为 20。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Range">
+            <summary>
+            周边查询范围，默认值为 3000 。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.SearchName">
+            <summary>
+            搜索关键字，必填项。 keyword
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.SearchType">
+            <summary>
+            查询类型，可不填。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Pguid">
+            <summary>
+            兴趣点的唯一标识，即 兴趣点的唯一标识，即 兴趣点的唯一标识，即 兴趣点的唯一标识，即 兴趣点的唯一标识，即 全局索引库的 全局索引库的 全局索引库的 全局索引库的 ID
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.Sid">
+            <summary>
+            服务编码 默认为1000-关键字查询 1001-根据中心点关键字查询周边兴趣点   1002-根据中心点坐标查询周边兴趣点  1005-以拉框方式查询图形区域内的关键字信息
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.ResType">
+            <summary>
+            返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，
+            支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 返回结果的格式，支持 XMLXML 与 JSON JSONJSON，
+            不区分大小写，默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，不区分大小写默认为 ，
+            不区分大小写默认为 XMLXML 格式
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Options.POISearchOption.EXT">
+            <summary>
+            扩展字段 扩展字段作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 
+            作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 作为过滤条件使用，
+            格式如下： 作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 作为过滤条件使用，格式如下： 
+            作为过滤条件使用，格式如下： "ext ext=custom(name:=custom(name:=custom(name: =custom(name: =custom(name:=custom(name: =
+            custom(name: 大恒 ;address: ;address:;address:;address: ;address:苏州街 )-custom_and(false)" custom_and(false)" custom_and(false)"
+            custom_and(false)"custom_and(false)"custom_and(false)" custom_and(false)"custom_and(false)"custom_and(false)"custom_and(false)"
+            custom_and(false)"custom_and(false)" custom_and(false)"其中， custom custom custom 是定制的过滤条件， 是定制的过滤条件， 
+            是定制的过滤条件， 是定制的过滤条件， name name、addressaddressaddressaddressaddressaddress 为返回结果中的属 为返回结果中的属 
+            为返回结果中的属 为返回结果中的属 为返回结果中的属 为返回结果中的属 为返回结果中的属 为
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.POISearchResult">
+            <summary>
+            兴趣点查询结果类。用于存储兴趣点查询的结果信息。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.POISearchResult.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POISearchResult.Record">
+            <summary>
+            当前记录数。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POISearchResult.Count">
+            <summary>
+            允许返回记录数与用户权限有关系。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POISearchResult.Total">
+            <summary>
+            总记录数。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POISearchResult.POIs">
+            <summary>
+            返回 MPOI 对象数组。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POISearchResult.Status">
+            <summary>
+            查询 状态， E0 表
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POISearchResult.Erro">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.Result.POI">
+            <summary>
+            POI信息类。用于存储查询结果中的兴趣点信息。 
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Result.POI.ToString">
+            <summary>
+            重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Address">
+            <summary>
+            POI地址。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Name">
+            <summary>
+            POI 名称。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Type">
+            <summary>
+            POI类型。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Url">
+            <summary>
+            POI相关的URL地址。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Pguid">
+            <summary>
+            POI唯一编号。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Tel">
+            <summary>
+            POI电话号码。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.X">
+            <summary>
+            POI经度坐标。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Y">
+            <summary>
+            POI纬度坐标。
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Distance">
+            <summary>
+            周边搜索时，距离中心点的直线距离。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.DriverDistance">
+            <summary>
+            驾车距离。周边查询按照导航距离排序时，距离中心点的导航距离。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Match">
+            <summary>
+            匹配度。 
+            </summary>
+        </member>
+        <member name="P:Com.AMap.Search.API.Result.POI.Code">
+            <summary>
+            POI区域代码。
+            </summary>
+        </member>
+        <member name="T:Com.AMap.Search.API.RouteSearch">
+            <summary>
+            网络导航查询类。
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.RouteSearch.RouteSearchByTwoPoi(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            通过起始点坐标搜索导航线路。
+            </summary>
+            <param name="startX">起点经度。</param>
+            <param name="startY">起点纬度。</param>
+            <param name="endX">终点经度。</param>
+            <param name="endY">终点纬度。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.RouteSearch.RouteSearchWithOption(Com.AMap.Search.API.Options.RouteSearchOption)">
+            <summary>
+            通过设置MRouteSearchOption对象属性进行导航路径搜索。
+            </summary>
+            <param name="opt">参数类对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.HttpHelper.CreateHttpClient(System.Net.Http.HttpClient@)">
+            <summary>
+            创建连接
+            </summary>
+            <param name="httpClient"></param>
+        </member>
+        <member name="T:Com.AMap.Search.API.PlugInHandler">
+            <summary>
+            Search
+            </summary>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.IntToByte4uint32(System.Int32)">
+            <summary>
+            将32位整型数字转成字节
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.BytesToInt4uint32(System.Byte[])">
+            <summary>
+            将字节转成32位整型
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.StreamToBytes(System.IO.Stream)">
+            <summary> 
+            将 Stream 转成 byte[] 
+            </summary> 
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.BytesToStream(System.Byte[])">
+            <summary> 
+            将 byte[] 转成 Stream 
+            </summary> 
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.IsValidPoint(System.Double,System.Double)">
+            <summary>
+            判断当前点是否在中国范围内
+            </summary>
+            <param name="pointX"></param>
+            <param name="pointY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetUniqueId">
+            <summary>
+            获取唯一id（网卡id） 替代imei
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetTime">
+            <summary>
+            格林威治时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetPKG">
+            <summary>
+            应用程序包名或程序名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetAppVersion">
+            <summary>
+            获取APP的版本号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetNettype">
+            <summary>
+            获得网络类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetApiVersion">
+            <summary>
+            API的版本号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetModel">
+            <summary>
+            获取设备名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetResolution">
+            <summary>
+            终端屏幕分辨率
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Com.AMap.Search.API.Utilities.GetSys_ver">
+            <summary>
+            操作系统版本
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

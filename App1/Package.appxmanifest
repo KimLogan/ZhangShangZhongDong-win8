@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="1a96a700-58fa-40e4-89ae-14d889f366e3" Publisher="CN=Kim" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>App1</DisplayName>
+    <PublisherDisplayName>Kim</PublisherDisplayName>
+    <Logo>Assets\LOGO_90.jpg</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="App1.App">
+      <m2:VisualElements DisplayName="掌上中东" Square150x150Logo="Assets\Square150x150Logo.jpg" Square30x30Logo="Assets\LOGO_30.jpg" Description="掌上中东" ForegroundText="dark" BackgroundColor="#008000">
+        <m2:DefaultTile Square70x70Logo="Assets\LOGO_70.jpg" DefaultSize="wide310x150Logo" Wide310x150Logo="Assets\logo310-150.jpg">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FFFFFF" />
+      </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.fileTypeAssociation">
+          <FileTypeAssociation Name="title">
+            <SupportedFileTypes>
+              <FileType>.dat</FileType>
+            </SupportedFileTypes>
+          </FileTypeAssociation>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

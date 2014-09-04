@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="App1.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:amap="using:Com.AMap.Maps.Api"
+    mc:Ignorable="d">  
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton Icon="Home" Label="返回主页" Click="AppBarButton_Click" />
+                <AppBarSeparator/>
+                <AppBarButton Icon="Back" Label="返回上一页" Click="AppBarButton_Click1" />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="Black">
+        <Grid x:Name="mapview1" Margin="10,178,556,75"/>
+        <StackPanel HorizontalAlignment="Left" Height="513" Margin="840,180,0,0" VerticalAlignment="Top" Width="465">
+        	<RichTextBlock Height="470" Width="405" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="35,0,25,0">
+        		<Paragraph>
+        			<LineBreak/>
+        			<LineBreak/>
+        			<Run Text="         大学城北地铁站" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold"/>
+        		</Paragraph>
+        		<Paragraph>
+        			<LineBreak/>
+        			<LineBreak/>
+        			<Run Text="      地处广州地铁四号线：唯一一条横跨大学城的地铁线。由于地理位置的原因，每逢离校或返校高峰时段，该地铁站的人流量都十分巨大。站内建设有7-11便利店、美心西饼店以及中国联通服务站，共有A、B、C、D四个出口，各出口信息如下。PS:如要前往中山大学生活区和教学区，则需从D出口出站。" FontFamily="Global User Interface" FontSize="20"/>
+        		</Paragraph>
+        		<Paragraph FontSize="20" TextAlignment="Left">
+        			<LineBreak/>
+        			<LineBreak/>
+        			<Run Text=" A：中环西路、星海音乐学院、华南师范大学 "/>
+        			<LineBreak/>
+        			<Run Text=" B：中环西路 "/>
+        			<LineBreak/>
+        			<Run Text=" C：中心北大街 "/>
+        			<LineBreak/>
+        			<Run Text=" D：中心北大街、广东省中医院大学城医院、中山大学教学区"/>
+        		</Paragraph>
+        	</RichTextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
+

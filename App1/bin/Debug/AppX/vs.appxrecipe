@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>KIM-PC</Machine>
+    <WindowsUser>Kim</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>1a96a700-58fa-40e4-89ae-14d889f366e3</PackageIdentityName>
+    <RegisteredManifestChecksum>052A5AB0B4B187E2A86FA96758BCBA3AEFE8E23028D58BC56C492A6E035157EF</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>1a96a700-58fa-40e4-89ae-14d889f366e3_1.0.0.0_neutral__saedyb88vww5r</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>1a96a700-58fa-40e4-89ae-14d889f366e3_saedyb88vww5r!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>1a96a700-58fa-40e4-89ae-14d889f366e3</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Kim</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-28T16:07:22.615</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\App1.exe">
+      <PackagePath>App1.exe</PackagePath>
+      <Modified>2014-05-28T16:07:16.643</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\SDK\Com.AMap.Maps.Api.dll">
+      <PackagePath>Com.AMap.Maps.Api.dll</PackagePath>
+      <Modified>2014-05-17T14:18:07.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\SDK\Com.AMap.Search.API.winmd">
+      <PackagePath>Com.AMap.Search.API.winmd</PackagePath>
+      <Modified>2014-05-17T14:18:07.512</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\01.jpg">
+      <PackagePath>Assets\01.jpg</PackagePath>
+      <Modified>2014-05-17T14:18:10.182</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\bus.jpg">
+      <PackagePath>Assets\bus.jpg</PackagePath>
+      <Modified>2014-05-17T14:18:12.874</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\DSC_0997.jpg">
+      <PackagePath>Assets\DSC_0997.jpg</PackagePath>
+      <Modified>2014-05-28T07:20:11.444</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\DSC_1000.jpg">
+      <PackagePath>Assets\DSC_1000.jpg</PackagePath>
+      <Modified>2014-05-28T07:22:45.657</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\DSC_1003.jpg">
+      <PackagePath>Assets\DSC_1003.jpg</PackagePath>
+      <Modified>2014-05-28T07:22:43.922</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\DSC_1006.jpg">
+      <PackagePath>Assets\DSC_1006.jpg</PackagePath>
+      <Modified>2014-05-28T07:22:44.407</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\east1.jpg">
+      <PackagePath>Assets\east1.jpg</PackagePath>
+      <Modified>2014-05-17T14:18:12.883</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\gate.jpg">
+      <PackagePath>Assets\gate.jpg</PackagePath>
+      <Modified>2014-05-17T14:18:13.025</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\GOGO.jpg">
+      <PackagePath>Assets\GOGO.jpg</PackagePath>
+      <Modified>2014-05-22T11:18:19.603</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\higherCenter.jpg">
+      <PackagePath>Assets\higherCenter.jpg</PackagePath>
+      <Modified>2014-05-27T16:47:39.782</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\library.jpg">
+      <PackagePath>Assets\library.jpg</PackagePath>
+      <Modified>2014-05-22T10:58:11.923</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\LOGO.jpg">
+      <PackagePath>Assets\LOGO.jpg</PackagePath>
+      <Modified>2014-05-28T12:44:29.671</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\logo310-150.scale-100.jpg">
+      <PackagePath>Assets\logo310-150.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-28T13:26:52.944</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\LOGO_30.scale-100.jpg">
+      <PackagePath>Assets\LOGO_30.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-28T12:48:42.161</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\LOGO_70.scale-100.jpg">
+      <PackagePath>Assets\LOGO_70.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-28T12:47:56.237</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\LOGO_90.scale-180.jpg">
+      <PackagePath>Assets\LOGO_90.scale-180.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-28T12:50:53.762</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\route.jpg">
+      <PackagePath>Assets\route.jpg</PackagePath>
+      <Modified>2014-05-17T14:18:13.112</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\south.jpg">
+      <PackagePath>Assets\south.jpg</PackagePath>
+      <Modified>2014-05-17T14:18:13.193</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\sports.jpg">
+      <PackagePath>Assets\sports.jpg</PackagePath>
+      <Modified>2014-05-28T07:22:44.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\Square150x150Logo.scale-100.jpg">
+      <PackagePath>Assets\Square150x150Logo.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-28T12:47:32.611</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\team.jpg">
+      <PackagePath>Assets\team.jpg</PackagePath>
+      <Modified>2014-05-17T14:18:14.658</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\back.png">
+      <PackagePath>Assets\back.png</PackagePath>
+      <Modified>2014-05-17T14:18:14.662</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\food.png">
+      <PackagePath>Assets\food.png</PackagePath>
+      <Modified>2014-05-17T14:18:12.990</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <Modified>2014-05-17T14:18:13.059</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\recommendRoute.png">
+      <PackagePath>Assets\recommendRoute.png</PackagePath>
+      <Modified>2014-05-17T14:18:13.148</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <Modified>2014-05-17T14:18:13.170</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-17T14:18:13.197</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\SplashScreen.scale-140.png">
+      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-17T14:18:13.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <Modified>2014-05-17T14:18:13.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Assets\userRoute.png">
+      <PackagePath>Assets\userRoute.png</PackagePath>
+      <Modified>2014-05-17T14:18:14.641</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2014-05-17T14:18:07.574</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.233</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\About.xbf">
+      <PackagePath>About.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.233</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage1.xbf">
+      <PackagePath>BlankPage1.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.233</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\Introduction.xbf">
+      <PackagePath>Introduction.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.233</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage12.xbf">
+      <PackagePath>BlankPage12.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.233</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage13.xbf">
+      <PackagePath>BlankPage13.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.234</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage14.xbf">
+      <PackagePath>BlankPage14.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.234</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage15.xbf">
+      <PackagePath>BlankPage15.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.234</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage16.xbf">
+      <PackagePath>BlankPage16.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.234</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage17.xbf">
+      <PackagePath>BlankPage17.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.234</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage6.xbf">
+      <PackagePath>BlankPage6.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage7.xbf">
+      <PackagePath>BlankPage7.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage8.xbf">
+      <PackagePath>BlankPage8.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\BlankPage9.xbf">
+      <PackagePath>BlankPage9.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\bus1.xbf">
+      <PackagePath>bus1.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\Common\StandardStyles.xbf">
+      <PackagePath>Common\StandardStyles.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\EastCampus.xbf">
+      <PackagePath>EastCampus.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.236</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\food.xbf">
+      <PackagePath>food.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.236</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.236</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\Page1.xbf">
+      <PackagePath>Page1.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.237</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\Page2.xbf">
+      <PackagePath>Page2.xbf</PackagePath>
+      <Modified>2014-05-28T16:07:15.237</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kim\Desktop\掌上中大\1\App1\App1\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-05-28T16:07:17.990</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="App1.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Visible">
+                <AppBarButton x:ConnectionId='1' Icon="Back" Label="返回上一页"                           />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Left" Height="505" Margin="96,155,0,0" VerticalAlignment="Top" Width="1187">
+            <ScrollViewer Height="490">
+                <RichTextBlock VerticalAlignment="Top" Width="1072">
+                    <Paragraph Margin="20,0,0,0">
+                        <LineBreak/>
+                        <Run Text="隐私声明及信息" FontSize="36" FontWeight="Bold"/>
+                        <LineBreak/>
+                        <LineBreak/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0">
+                        <LineBreak/>
+                        <Run Text="  本软件十分重视用户信息的保护，一旦您选择使用本软件，即表示您认可并接受本条款内容。" FontSize="16"/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0">
+                        <LineBreak/>
+                        <Run Text="一. 信息收集" FontSize="20" FontWeight="Bold"/>
+                        <LineBreak/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0">
+                        <Run Text="1. 为了向您提供全部的软件功能，本软件利用互联网和GPS等设备获取用户地理位置信息。在获取位置信息前，会向您做出询问。并且所得的位置信息不会上传到网络，不会出现位置信息泄露的现象。" FontSize="16"/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0">
+                        <LineBreak/>
+                        <Run Text="2. 本产品联网功能仅用作定位与地图加载，不用于其它用途，不采用Cookie等收集用户信息。" FontSize="16"/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0">
+                        <LineBreak/>
+                        <Run Text="3. 我们会随时会对本隐私权保护声明进行修订。" FontSize="16"/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0">
+                        <LineBreak/>
+                        <Run Text="二. 联系方式" FontWeight="Bold" FontSize="20"/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0">
+                        <LineBreak/>
+                        <Run Text="    Email：thetruthmyg94@gmail.com" FontSize="16"/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0">
+                        <LineBreak/>
+                        <Run Text="    Sina Weibo: @月光狂想家 @_子在川上曰_" FontSize="16"/>
+                    </Paragraph>
+                    <Paragraph Margin="15,0,0,0" TextAlignment="Left">
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="                                                               
+                                                                                
+                                                              版权所有©2014，Timing，Inc"/>
+                    </Paragraph>
+                </RichTextBlock>
+            </ScrollViewer>
+        </StackPanel>
+
+    </Grid>
+</Page>
+
